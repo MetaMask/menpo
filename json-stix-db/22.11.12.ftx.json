@@ -1,0 +1,176 @@
+{
+    "type": "bundle",
+    "id": "bundle--5268bdd6-6c63-4cb1-a1a9-051684119443",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--11a9bdb6-1098-4407-a890-a13a669acce9",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "FTX Drainer",
+            "description": "On Nov 12 FTX and FTX US experienced suspicious withdrawals upwards of $450m."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--09963ad9-0061-4494-9972-3fcd5dbfaf54",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x59ABf3837Fa962d6853b4Cc0a19513AA031fd32b",
+            "description": "FTX Drainer 00",
+            "pattern": "[x-defi-address:value = '0x59ABf3837Fa962d6853b4Cc0a19513AA031fd32b' AND (x-defi-address:blockchain = 'ethereum' OR x-defi-address:blockchain = 'bsc')]",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4d0493d7-3553-4907-af09-4cd6aec8228d",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "6sEk1enayZBGFyNvvJMTP7qs5S3uC7KLrQWaEk38hSHH",
+            "description": "FTX Drainer 01",
+            "pattern": "[x-defi-address:value = '6sEk1enayZBGFyNvvJMTP7qs5S3uC7KLrQWaEk38hSHH' AND x-defi-address:blockchain = 'solana']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b7108020-dac1-4050-bd26-6674b1a4d0b6",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--09963ad9-0061-4494-9972-3fcd5dbfaf54",
+            "target_ref": "threat-actor--11a9bdb6-1098-4407-a890-a13a669acce9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a022744e-68ab-4c64-8ab6-159b2cc5a6dd",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--4d0493d7-3553-4907-af09-4cd6aec8228d",
+            "target_ref": "threat-actor--11a9bdb6-1098-4407-a890-a13a669acce9"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--cf62f851-6fbe-4d9d-94f4-d09f0f191529",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Unauthorized withdrawals",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_layer": "AUX",
+            "x_defi_taxonomy_incident_cause": "Greedy Operator",
+            "x_defi_taxonomy_incident_type": "Insider trade or other activities"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5a134265-463e-4528-8f99-74e9345947fe",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--11a9bdb6-1098-4407-a890-a13a669acce9",
+            "target_ref": "attack-pattern--cf62f851-6fbe-4d9d-94f4-d09f0f191529"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--ffdce5c5-ddfb-431b-84d4-5713c5a6db66",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "FTX",
+            "description": "FTX is a cryptocurrency exchange founded in 2017 by Sam Bankman-Fried and Gary Wang.",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/FTX_Official"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7c9f2319-2cdb-4da2-a199-802988ee5f41",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--11a9bdb6-1098-4407-a890-a13a669acce9",
+            "target_ref": "identity--ffdce5c5-ddfb-431b-84d4-5713c5a6db66"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--66c6be97-f708-42c3-943c-128f920365fe",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--cf62f851-6fbe-4d9d-94f4-d09f0f191529",
+            "target_ref": "identity--ffdce5c5-ddfb-431b-84d4-5713c5a6db66"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--954d2063-209b-4a64-b4d6-3ce19d235bbf",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "FTX 2022.11.12",
+            "description": "('On Nov 12 FTX and FTX US experienced suspicious withdrawals upwards of $450m.', 'The tokens were sold for DAI, ETH, BNB, & more.', 'The tokens were consolidated into one main wallet 0x59.', 'FTX US GC Ryne Miller clarified these were unauthorized transactions.', 'Tether and Paxos froze assets on Ethereum, Solana, and Avalanche.')",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-11-12T00:00:00Z",
+            "object_refs": [
+                "threat-actor--11a9bdb6-1098-4407-a890-a13a669acce9",
+                "identity--ffdce5c5-ddfb-431b-84d4-5713c5a6db66"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/sbf-mask-off/"
+                },
+                {
+                    "source_name": "CoinDesk",
+                    "url": "https://www.coindesk.com/business/2022/11/10/tether-freezes-46m-of-usdt-following-law-enforcement-request/"
+                },
+                {
+                    "source_name": "Decrypt",
+                    "url": "https://decrypt.co/114587/paxos-freezes-paxg-crypto-ftx"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/_Ryne_Miller/status/1591495427211526146"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/zachxbt/status/1591475246250733568"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/zachxbt/status/1591276687228035074"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 450000000
+        }
+    ]
+}

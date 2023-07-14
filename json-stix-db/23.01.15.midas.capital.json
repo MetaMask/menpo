@@ -1,0 +1,267 @@
+{
+    "type": "bundle",
+    "id": "bundle--d66cff53-16fd-4874-b055-b145cb0de453",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--969d1af7-14c3-4da0-b423-e9ec4714ea45",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Midas Capital Attacker",
+            "description": "On January 15, 2023 Midas Capital lost $654K due to a read-only reentrancy vulnerability."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--8943b851-a7e1-473a-9473-501ab216c217",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x1863b74778cf5e1c9c482a1cdc2351362bd08611",
+            "description": "Midas Capital Attacker",
+            "pattern": "[x-defi-address:value = '0x1863b74778cf5e1c9c482a1cdc2351362bd08611' AND x-defi-address:blockchain = 'polygon']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--efa53fa0-a6c4-4395-a95e-166b0c7e3733",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--8943b851-a7e1-473a-9473-501ab216c217",
+            "target_ref": "threat-actor--969d1af7-14c3-4da0-b423-e9ec4714ea45"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--c8c7a177-8a10-4e0a-a0b4-d9afcb1bbc74",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x0053490215baf541362fc78be0de98e3147f40223238d5b12512b3e26c0a2c2f",
+            "description": "Midas Capital Attacker",
+            "pattern": "[x-defi-transaction:value = '0x0053490215baf541362fc78be0de98e3147f40223238d5b12512b3e26c0a2c2f' AND x-defi-address:blockchain = 'polygon']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a27d96a6-be05-4f9d-8b55-40ed42effcf9",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--c8c7a177-8a10-4e0a-a0b4-d9afcb1bbc74",
+            "target_ref": "threat-actor--969d1af7-14c3-4da0-b423-e9ec4714ea45"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--887970a1-1435-4077-95ab-286b4136b3a1",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Read-only reentrancy vulnerability",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_layer": "SC",
+            "x_defi_taxonomy_incident_type": "Reentrancy",
+            "x_defi_taxonomy_incident_cause": "Untrusted or unsafe calls"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--dd155837-a0d6-4944-b1dd-ddbcd0c9ef36",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--969d1af7-14c3-4da0-b423-e9ec4714ea45",
+            "target_ref": "attack-pattern--887970a1-1435-4077-95ab-286b4136b3a1"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--f047013d-dfd5-4be2-a4a6-b923881b3daf",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Midas Capital",
+            "description": "Polygon-based lending protocol",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Midas Capital",
+                    "url": "https://midascapital.xyz/"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/MidasCapitalxyz"
+                }
+            ]
+        },
+        {
+            "type": "x-defi-address",
+            "spec_version": "2.1",
+            "id": "x-defi-address--e6099e26-d3e5-47b9-9731-57aa6ba7a1c5",
+            "name": "0x5bca7ddf1bcccb2ee8e46c56bfc9d3cdc77262bc",
+            "description": "Midas Capital Readonly Reentrancy Vulnerable Contract",
+            "created": "2023-04-19T00:00:00Z",
+            "modified": "2023-04-19T00:00:00Z",
+            "blockchain": "polygon",
+            "value": "0x5bca7ddf1bcccb2ee8e46c56bfc9d3cdc77262bc"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d71f99b0-d16f-4f06-87b3-dd5707577b4f",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "identity--f047013d-dfd5-4be2-a4a6-b923881b3daf",
+            "target_ref": "x-defi-address--e6099e26-d3e5-47b9-9731-57aa6ba7a1c5"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--aa6a7880-14e2-4f43-b1ae-d54622c6ce85",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--969d1af7-14c3-4da0-b423-e9ec4714ea45",
+            "target_ref": "identity--f047013d-dfd5-4be2-a4a6-b923881b3daf"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d2823dc4-d250-4c79-9868-8636e2a68301",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--887970a1-1435-4077-95ab-286b4136b3a1",
+            "target_ref": "identity--f047013d-dfd5-4be2-a4a6-b923881b3daf"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Midas Capital 23.01.15",
+            "description": "On January 15, 2023 Midas Capital lost $654K due to a read-only reentrancy vulnerability.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2023-01-15T00:00:00Z",
+            "object_refs": [
+                "threat-actor--969d1af7-14c3-4da0-b423-e9ec4714ea45",
+                "identity--f047013d-dfd5-4be2-a4a6-b923881b3daf"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Phalcon.xyz",
+                    "url": "https://explorer.phalcon.xyz/tx/polygon/0x0053490215baf541362fc78be0de98e3147f40223238d5b12512b3e26c0a2c2f"
+                },
+                {
+                    "source_name": "Medium",
+                    "url": "https://medium.com/@numencyberlabs/jarvis-network-flash-loan-and-re-entrancy-attack-analysis-a649748f90bb"
+                },
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/midas-capital-rekt/"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/BeosinAlert/status/1614905399102287872"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/BlockSecTeam/status/1614864084956254209"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/Jarvis_Network/status/1614723934519234560"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 654000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--b6e59a68-7eab-409f-b8d0-19a4b3aecb95",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Midas recently added WMATIC-stMATIC Curve LP token for use as collateral. These tokens have a read-only reentrancy vulnerability which allows the token's virtual price to be manipulated when improperly implemented.",
+            "object_refs": [
+                "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--4cc0cec3-9ca2-4a2b-bf25-941c7515f40e",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The read-only reentrancy is a reentrancy scenario where a `view` function is reentered, which in most cases is unguarded as it does not modify the contract\u2019s state.",
+            "object_refs": [
+                "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--c9c9615b-bd16-49a8-a168-69a40de9a7a2",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "More on read-only reentrancy: https://chainsecurity.com/curve-lp-oracle-manipulation-post-mortem/",
+            "object_refs": [
+                "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--e68e262f-b5be-49fa-845b-bc792eaae6de",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "More on read-only reentrancy: https://quillaudits.medium.com/decoding-220k-read-only-reentrancy-exploit-quillaudits-30871d728ad5",
+            "object_refs": [
+                "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--38e6a905-61b3-4a18-92be-13f4b013bfa1",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The attacker was able to borrow the following assets against the inflated collateral:\n    * jCHF: 273,973\n    * jEUR: 368,058\n    * jGBP: 45,250\n    * agEUR: 45,435\n    * Which were then swapped to ~660k MATIC ($660k) and sent on to Kucoin and Binance.\n",
+            "object_refs": [
+                "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--1b74c2fd-5f2f-4529-a7dc-c9b771b34044",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Message from Midas to the attacker: https://polygonscan.com/tx/0x45e9e4addf8a67700fca8ab7f0fba07019e5ce5a8c630b02fc28c8b6115c66a7",
+            "object_refs": [
+                "report--e58e18b0-da1a-46d4-bdcd-5f960c1cf664"
+            ]
+        }
+    ]
+}

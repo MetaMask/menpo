@@ -1,0 +1,160 @@
+{
+    "type": "bundle",
+    "id": "bundle--879e5bdb-e71a-49c1-aacc-196d9913ceab",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--4f8b2b88-49b9-4320-bed5-780e7f58017c",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "name": "Deribit Attacker",
+            "description": "Deribit Exchange has lost $28M from their hot wallets on the Ethereum and Bitcoin networks."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--40bf1e7a-6290-4ab7-8283-f65076184e8e",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "name": "0xb0606f433496bf66338b8ad6b6d51fc4d84a44cd",
+            "description": "Deribit Attacker Ethereum Address",
+            "pattern": "[x-defi-address:value = '0xb0606f433496bf66338b8ad6b6d51fc4d84a44cd' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-01T01:09:29Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6601bc32-8861-41cc-b850-7c94f48db9cb",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--40bf1e7a-6290-4ab7-8283-f65076184e8e",
+            "target_ref": "threat-actor--4f8b2b88-49b9-4320-bed5-780e7f58017c"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--319d5e83-39e9-4d73-890a-c054248c3b98",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "name": "bc1qw5g8lw4kzltpdcraehy2dt6dqda8080xd6vhl4kg4wwsypwerg9s3x6pvk",
+            "description": "Deribit Attacker Bitcoin Address",
+            "pattern": "[x-defi-address:value = 'bc1qw5g8lw4kzltpdcraehy2dt6dqda8080xd6vhl4kg4wwsypwerg9s3x6pvk' AND x-defi-address:blockchain = 'bitcoin']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-01T01:09:29Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8c28b514-c837-44f1-add3-28fc0695f9b0",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--319d5e83-39e9-4d73-890a-c054248c3b98",
+            "target_ref": "threat-actor--4f8b2b88-49b9-4320-bed5-780e7f58017c"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--75bbb749-aa7e-4c4c-bf23-ff405157ab99",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "name": "Private key theft incident",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_incident_type": "Compromised private key / wallet",
+            "x_defi_taxonomy_layer": "AUX",
+            "x_defi_taxonomy_incident_cause": "Faulty Operation"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fbcc00c9-c629-4beb-b48e-0f6d0ae95ddb",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4f8b2b88-49b9-4320-bed5-780e7f58017c",
+            "target_ref": "attack-pattern--75bbb749-aa7e-4c4c-bf23-ff405157ab99"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--62901967-6344-4cec-bc1c-4344eba6bc63",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "name": "Deribit",
+            "description": "Cryptocurrency derivatives platform for traders of all backgrounds and trading styles",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Deribit",
+                    "url": "https://www.deribit.com/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d8deb85c-e2fd-4627-affb-7e5f9ba55036",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--4f8b2b88-49b9-4320-bed5-780e7f58017c",
+            "target_ref": "identity--62901967-6344-4cec-bc1c-4344eba6bc63"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f717521d-a265-4fef-9ff0-ea8fc0e0e447",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--75bbb749-aa7e-4c4c-bf23-ff405157ab99",
+            "target_ref": "identity--62901967-6344-4cec-bc1c-4344eba6bc63"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--61e425e1-a2f3-4fca-b338-f7e25bf7f436",
+            "created": "2023-05-01T01:09:29.000Z",
+            "modified": "2023-05-01T01:09:29.000Z",
+            "name": "Deribit 22.11.01",
+            "description": "Deribit Exchange has lost $28M from their hot wallets on the Ethereum and Bitcoin networks.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-11-01T00:00:00Z",
+            "object_refs": [
+                "threat-actor--4f8b2b88-49b9-4320-bed5-780e7f58017c",
+                "identity--62901967-6344-4cec-bc1c-4344eba6bc63"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/deribit-rekt/"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/DeribitExchange/status/1587701883778523136"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 28000000
+        }
+    ]
+}

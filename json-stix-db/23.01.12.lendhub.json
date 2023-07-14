@@ -1,0 +1,185 @@
+{
+    "type": "bundle",
+    "id": "bundle--633a0d36-d52a-424f-9b06-f3fe1feb6d56",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--07639ecb-da65-445b-b0bf-5e7658cc2c1b",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "LendHub Attacker",
+            "description": "('On January 12, 2023 LendHub lost $6M due to a misconfiguration', 'which left a deprecated token contract live, which allowed attackers to arbitrage them.')"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d3068f31-3dcd-4749-b726-496a26792973",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x9d0163e76bbcf776001e639d65f573949a53ab03",
+            "description": "LendHub attacker address",
+            "pattern": "[x-defi-address:value = '0x9d0163e76bbcf776001e639d65f573949a53ab03' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--89e7a455-5a20-4ea3-b3ff-f7a8d7a722e9",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--d3068f31-3dcd-4749-b726-496a26792973",
+            "target_ref": "threat-actor--07639ecb-da65-445b-b0bf-5e7658cc2c1b"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--b57b2183-09a9-434a-8af6-bdf74ea621f7",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Deprecated token contract live",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_incident_type": "Other unsafe DeFi protocol dependency",
+            "x_defi_taxonomy_layer": "PRO",
+            "x_defi_taxonomy_incident_cause": "Unsafe dependency"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--acebfcba-64ed-4786-a64f-dbc3baf2fd68",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--07639ecb-da65-445b-b0bf-5e7658cc2c1b",
+            "target_ref": "attack-pattern--b57b2183-09a9-434a-8af6-bdf74ea621f7"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--cc56112e-25db-4c2f-a6ed-cc14114f832b",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "LendHub",
+            "description": "LendHub is the safest decentralized lending platform aiming to facilitate cross-chain lending.",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Twitter",
+                    "url": "https://www.lendhub.online/en"
+                },
+                {
+                    "source_name": "LendHub",
+                    "url": "https://twitter.com/LendHubDefi"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--351e65eb-5a6a-4aa9-b13e-f0f91d407f75",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--07639ecb-da65-445b-b0bf-5e7658cc2c1b",
+            "target_ref": "identity--cc56112e-25db-4c2f-a6ed-cc14114f832b"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f50f5a4d-e494-4d52-9338-5d817e499e81",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--b57b2183-09a9-434a-8af6-bdf74ea621f7",
+            "target_ref": "identity--cc56112e-25db-4c2f-a6ed-cc14114f832b"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--d30f6050-8abc-47ee-9121-319c65fff9e8",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "LendHub 2023.01.12",
+            "description": "('On January 12, 2023 LendHub lost $6M due to a misconfiguration', 'which left a deprecated token contract live, which allowed attackers to arbitrage them.')",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2023-01-12T00:00:00Z",
+            "object_refs": [
+                "threat-actor--07639ecb-da65-445b-b0bf-5e7658cc2c1b",
+                "identity--cc56112e-25db-4c2f-a6ed-cc14114f832b"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/SlowMist_Team/status/1613906590574198784"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/LendHubDefi/status/1613846541651030018"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 6000000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--15255a24-ad29-486f-bb89-72046aec4758",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The attack was only possible because two competing versions of the same token were available on the market.",
+            "object_refs": [
+                "report--d30f6050-8abc-47ee-9121-319c65fff9e8"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--9050de9a-da38-4b4d-85b9-a3ee1eff1f44",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Specifically the presence of two lBSV cTokens, one of which had been phased out but unfortunately, was not removed from the market entirely.",
+            "object_refs": [
+                "report--d30f6050-8abc-47ee-9121-319c65fff9e8"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--eaaa3337-ba0c-4259-9899-8ad683ca4c28",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "This created a discrepancy between the old and new lBSV, with different Comptroller contracts but same pricing in the market, causing a disconnect in the calculation of liabilities between the old and new markets.",
+            "object_refs": [
+                "report--d30f6050-8abc-47ee-9121-319c65fff9e8"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--d6ae6990-3fba-4051-916b-0a5f3d56bca5",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The LendHub hack demonstrates the importance of a clear, comprehensive process for updating smart contracts on the blockchain.",
+            "object_refs": [
+                "report--d30f6050-8abc-47ee-9121-319c65fff9e8"
+            ]
+        }
+    ]
+}

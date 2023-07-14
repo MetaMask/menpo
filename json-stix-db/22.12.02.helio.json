@@ -1,0 +1,330 @@
+{
+    "type": "bundle",
+    "id": "bundle--7349d9b7-4870-462a-a9b1-703f56182cee",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Helio Attacker",
+            "description": "On December 2, 2022 Helio lost $19M as a result of a delayed price oracle."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--4fd7429f-ff32-4ddb-ae38-91cac93413e8",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x8d11f5b4d351396ce41813dce5a32962aa48e217",
+            "description": "Helio Attacker Address",
+            "pattern": "[x-defi-address:value = '0x8d11f5b4d351396ce41813dce5a32962aa48e217' AND x-defi-address:blockchain = 'bsc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3f34c0ca-1d53-4451-90c0-047c83ab35db",
+            "created": "2023-03-01T00:00:00.000Z",
+            "modified": "2023-03-01T00:00:00.000Z",
+            "name": "0x391a665e8efad14cd63d5caed10f53881ebb8eab1c5ae14648db2d06cdd00cdd",
+            "description": "Helio attacker used the $aBNBc tokens they had already deposited as collateral to borrow 16,444,740 $HAY tokens.",
+            "pattern": "[x-defi-transaction:value = '0x391a665e8efad14cd63d5caed10f53881ebb8eab1c5ae14648db2d06cdd00cdd' AND x-defi-address:blockchain = 'bsc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-03-01T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--54e8a74f-28c1-44b6-ae86-c202194883a1",
+            "created": "2023-03-01T00:00:00.000Z",
+            "modified": "2023-03-01T00:00:00.000Z",
+            "name": "0x9b4d0eb8df95ac6d5548c6abed0e90ceccebcf2560ef41bdc514d74746c0dd8e",
+            "description": "Helio attacker then swapped 16,444,740 $HAY tokens to 15,504,986 BUSD.",
+            "pattern": "[x-defi-transaction:value = '0x9b4d0eb8df95ac6d5548c6abed0e90ceccebcf2560ef41bdc514d74746c0dd8e' AND x-defi-address:blockchain = 'bsc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-03-01T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7146e44d-e317-406b-bf9f-70d5e91d668d",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "description": "Helio Attacker BUSD Token Address",
+            "pattern": "[x-defi-address:value = '0xe9e7cea3dedca5984780bafc599bd69add087d56' AND x-defi-address:blockchain = 'bsc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d13cfa70-673f-4f1e-8074-5097cf360d87",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--4fd7429f-ff32-4ddb-ae38-91cac93413e8",
+            "target_ref": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d64755b4-4bb7-499b-8acc-5ff192e5b1a9",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--3f34c0ca-1d53-4451-90c0-047c83ab35db",
+            "target_ref": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d0682294-9518-4bc7-a100-a397d81e63a2",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--54e8a74f-28c1-44b6-ae86-c202194883a1",
+            "target_ref": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5a30adf5-677d-4491-a646-caa74c8978ee",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--7146e44d-e317-406b-bf9f-70d5e91d668d",
+            "target_ref": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--516ca77f-28c6-4347-9332-d7cae397d3ab",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Oracle Price Manipulation",
+            "description": "Delayed price oracle which allowed traders to borrow stablecoin with worthless aBNBc token.",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_layer": "PRO",
+            "x_defi_taxonomy_incident_cause": "Unsafe Dependency",
+            "x_defi_taxonomy_incident_type": "On-chain oracle manipulation"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b09abd6e-d864-46b9-bc45-6bb7e8fb44f6",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9",
+            "target_ref": "attack-pattern--516ca77f-28c6-4347-9332-d7cae397d3ab"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--1a84002c-5c09-47ea-b37d-84be4ff01a7b",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Helio Protocol",
+            "description": "('Helio Protocol is an open-source liquidity protocol built on the BNB Chain', 'that allows users to borrow and earn yield on the destablecoin $HAY.')",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Helio Protocol",
+                    "url": "https://helio.money/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--ba9278d0-5703-4d77-963d-f35e4fc2affb",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9",
+            "target_ref": "identity--1a84002c-5c09-47ea-b37d-84be4ff01a7b"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--007f7e4c-90ff-4b62-b5e4-7e3fc29e6aca",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--516ca77f-28c6-4347-9332-d7cae397d3ab",
+            "target_ref": "identity--1a84002c-5c09-47ea-b37d-84be4ff01a7b"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "",
+            "description": "('On December 2, 2022 Helio lost $19M as a result of a delayed price oracle,', 'which allowed traders to borrow stablecoin with worthless aBNBc token.', 'The root cause of the vulnerability is due to the failure of oracle', 'in updating the price of the associated tokens after they had crashed to ', 'a significantly lower value than they earlier trading price.')",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-12-02T00:00:00Z",
+            "object_refs": [
+                "threat-actor--f7206d71-71f5-4387-9dad-81fe251a3fd9",
+                "identity--1a84002c-5c09-47ea-b37d-84be4ff01a7b"
+            ],
+            "external_references": [
+                {
+                    "source_name": "NeptuneMutual",
+                    "url": "https://neptunemutual.com/blog/report-know-about-the-helio-protocol-hack"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/WuBlockchain/status/1598523763028799488"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/cz_binance/status/1598575867311132673"
+                },
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/ankr-helio-rekt/"
+                },
+                {
+                    "source_name": "The Block",
+                    "url": "https://www.theblock.co/post/191668/attacker-pockets-20-million-in-exploits-on-ankr-and-helio"
+                },
+                {
+                    "source_name": "Dune",
+                    "url": "https://dune.com/philosophia_ventures/helio-money-exploitation"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/WuBlockchain/status/1598523763028799488"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/Helio_Money/status/1598710454796390407?s=20&t=9Jh4Ukme6kpP39Wx68gUEg"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 19000000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--136b6cb7-933d-423b-9e63-0943a87950f8",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The Ankr protocol had suffered a governance key compromise, allowing an attacker to mint massive amount of $aBNBc tokens.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--b35b20eb-f5c4-4c32-9b3a-7c799ba78e2e",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "After the Ankr Exploiter dumped $aBNBc tokens, another user bought 183,885 $aBNBc tokens from 1inch for just 10 $BNB, which were worth about $2,879 at the time the event took place.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--6c9661ce-8cc5-4e87-aace-05bb3e26d8fa",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The price oracle of Helio was not updated during the exploit that took place with the $aBNBc tokens.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--df4fbdd7-fb31-4860-bf36-5396ba0cff1c",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The attacker used the $aBNBc tokens they had already deposited as collateral to borrow 16,444,740 $HAY tokens.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--74ede083-7730-4709-a126-39a4e52c80d6",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The attacker then swapped 16,444,740 $HAY tokens to 15,504,986 BUSD.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--5226d7e8-207b-4926-880c-f1cce2eab03a",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The swapped BUSD is then transferred to this address involving three different transactions, and then to Binance hot wallet.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--be9d167f-9618-40da-9e19-ec0b3d9aa568",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The stablecoin $HAY de-pegged following the incident and fell to a low of roughly $0.21.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--8302d617-05fe-4b2c-91c1-a46513a5e276",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "In a statement, the team explained that they were collaborating with Ankr Protocol to resolve the issue and that they had proposed a bilateral arrangement in which Ankr would pay for Helio's bad debt as a result of this exploit.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--dfe74842-cdf1-4268-aab5-569ff4dd2bfc",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Additionally, in order to aid with the re-peg of $HAY, Ankr would be purchasing any extra $HAY that is produced as a result of the discounted $aBNBc and send it to a burn address.",
+            "object_refs": [
+                "report--8d8d708f-03e6-4b3d-ab81-06fbd4ec0692"
+            ]
+        }
+    ]
+}

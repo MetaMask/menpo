@@ -1,0 +1,209 @@
+{
+    "type": "bundle",
+    "id": "bundle--83cbec21-fdc4-4ab0-b10b-502f1efed03b",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--10f36171-4446-4982-b1e1-fc604c23dc08",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Lodestar Attacker",
+            "description": "On December 12th, 2022,    the price oracle of plvGLP collateral was manipulated,    allowing the attacker to drain their lending pools for a profit of ~$6.5M."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--e98100e6-85ab-4365-85fb-195e7d3ccc8c",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0xc29d94386ff784006ff8461c170d1953cc9e2b5c",
+            "description": "",
+            "pattern": "[x-defi-address:value = '0xc29d94386ff784006ff8461c170d1953cc9e2b5c' AND x-defi-address:blockchain = 'arbitrum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8efc8d6a-a7ea-4add-8a31-caa6c9fb3abd",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--e98100e6-85ab-4365-85fb-195e7d3ccc8c",
+            "target_ref": "threat-actor--10f36171-4446-4982-b1e1-fc604c23dc08"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--56d6fed1-3242-49e4-ae71-091e47a83e2f",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0xb50f58d50e30dfdaad01b1c6bcc4ccb0db55db13",
+            "description": "",
+            "pattern": "[x-defi-address:value = '0xb50f58d50e30dfdaad01b1c6bcc4ccb0db55db13' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--041d5839-17c8-42dc-b016-1adaba38095d",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--56d6fed1-3242-49e4-ae71-091e47a83e2f",
+            "target_ref": "threat-actor--10f36171-4446-4982-b1e1-fc604c23dc08"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--9f136b99-84aa-4aa1-9aab-9d1ce4f753a4",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Price oracle manipulation",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_incident_type": "On-chain oracle manipulation",
+            "x_defi_taxonomy_layer": "AUX",
+            "x_defi_taxonomy_incident_cause": "Unsafe dependency"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--09045088-cb79-49be-bf81-f7657d121897",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--10f36171-4446-4982-b1e1-fc604c23dc08",
+            "target_ref": "attack-pattern--9f136b99-84aa-4aa1-9aab-9d1ce4f753a4"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--a215d4ad-5d1a-4075-aa6c-f7fd79b8a4f1",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Lodestar",
+            "description": "A Compound fork on Arbitrum",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Lodestar",
+                    "url": "https://www.lodestarfinance.io/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8493a9f4-0e68-41b6-87e7-9c6fe902c62c",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--10f36171-4446-4982-b1e1-fc604c23dc08",
+            "target_ref": "identity--a215d4ad-5d1a-4075-aa6c-f7fd79b8a4f1"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a76afd71-c502-40dc-a8a9-42a7ae3f078c",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--9f136b99-84aa-4aa1-9aab-9d1ce4f753a4",
+            "target_ref": "identity--a215d4ad-5d1a-4075-aa6c-f7fd79b8a4f1"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--dc59fe48-b19e-4018-ada0-3db587d1bbce",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Lodestar 22.12.10",
+            "description": "On December 12th, 2022,    the price oracle of plvGLP collateral was manipulated,    allowing the attacker to drain their lending pools for a profit of ~$6.5M.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-12-10T00:00:00Z",
+            "object_refs": [
+                "threat-actor--10f36171-4446-4982-b1e1-fc604c23dc08",
+                "identity--a215d4ad-5d1a-4075-aa6c-f7fd79b8a4f1"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Lodestar",
+                    "url": "https://blog.lodestarfinance.io/post-mortem-summary-13f5fe0bb336"
+                },
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/lodestar-rekt/"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/BowTiedPickle/status/1601650177369993216"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/lodestarfinance/status/1601686921566375936"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/SolidityFinance/status/1601684153740963840"
+                },
+                {
+                    "source_name": "CertiK",
+                    "url": "https://www.certik.com/resources/blog/TqTyq4vYHl8JzS7zyJye9-lodestar-finance-incident-analysis"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 6500000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--7924db99-2439-4f80-a1e1-53548c846ae4",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Using flash loans, the attacker manipulated the plvGLP price    reported by Lodestar\u2019s GLPOracle contract,    allowing them to \u201cborrow\u201d all the funds supplied on the platform.",
+            "object_refs": [
+                "report--dc59fe48-b19e-4018-ada0-3db587d1bbce"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--4c47bad8-b04a-4d02-84f0-102f8d06d3bb",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "The GLPOracle did not properly take into account the impact of a user    calling donate() on the GlpDepositor contract, which inflates the    assets of the GlpDepositor contract, and therefore the oracle-delivered    price of the plvGLP token.",
+            "object_refs": [
+                "report--dc59fe48-b19e-4018-ada0-3db587d1bbce"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--8f886412-2b82-47ba-82c9-7ac0af4d2f1a",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Attack Summary\n    In this case, the attack can be summarized as follows:\n      1. Attacker places a large amount of USDC into Lodestar\n      2. Attacker borrows plsGLP (longtail - high risk asset)\n      3. Attacker lends plsGLP and receives iplsGLP\n      4. Steps 2 and 3 are repeated\n      5. The key issue is that the oracle price of plsGLP is manipulatable - Oracles\n      6. The higher the value of plsGLP the higher the profit is able to be extracted.\n      7. Further the higher the exchange rate of plsGLP to GLP the larger the redemption is possible\n      8. The price of plsGLP was then pushed up by the attacker and they were able to borrow the remaining assets:\n",
+            "object_refs": [
+                "report--dc59fe48-b19e-4018-ada0-3db587d1bbce"
+            ]
+        }
+    ]
+}

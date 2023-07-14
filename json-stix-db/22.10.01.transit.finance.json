@@ -1,0 +1,230 @@
+{
+    "type": "bundle",
+    "id": "bundle--c50c7dd9-57ed-4901-9e75-a31fc3a9b75f",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--b38213e3-1148-4dd0-b145-355eb7eb22f3",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "name": "Transit Finance Attacker",
+            "description": "On October 1, 2022 Transit Finance users were targeted        using a function parameter injection bug in the DEX\u2019s contract."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--93fdabaa-483c-424d-883d-14d914d1d02e",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "name": "0x75f2aba6a44580d7be2c4e42885d4a1917bffd46",
+            "description": "Transit Finance Attacker Address",
+            "pattern": "[x-defi-address:value = '0x75f2aba6a44580d7be2c4e42885d4a1917bffd46'         AND (x-defi-address:blockchain = 'ethereum' OR x-defi-address:blockchain = 'bsc')]",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-28T16:47:36Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9776274f-e74c-4364-a937-454cd683082e",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--93fdabaa-483c-424d-883d-14d914d1d02e",
+            "target_ref": "threat-actor--b38213e3-1148-4dd0-b145-355eb7eb22f3"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--088aee90-a0e9-48c3-9941-9c2be399e266",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "name": "Function parameter injection bug",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_layer": "SC",
+            "x_defi_taxonomy_incident_type": "Absence of coding logic or sanity check",
+            "x_defi_taxonomy_incident_cause": "Coding mistake"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--387c9929-d288-4929-b804-d7ccffafd200",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--b38213e3-1148-4dd0-b145-355eb7eb22f3",
+            "target_ref": "attack-pattern--088aee90-a0e9-48c3-9941-9c2be399e266"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--b99a878f-5033-462b-821e-0f28a855eeb0",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "name": "Transit Finance",
+            "description": "Multi-chain DEX Aggregator",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Transit Finance",
+                    "url": "https://www.transit.finance/en/"
+                }
+            ]
+        },
+        {
+            "type": "x-defi-address",
+            "spec_version": "2.1",
+            "id": "x-defi-address--db9a9845-9f67-4704-b6fe-71c390f29118",
+            "name": "0xed1afc8c4604958c2f38a3408fa63b32e737c428",
+            "description": "Vulnerable contract in ethereum and BSC",
+            "created": "2023-04-28T16:47:36Z",
+            "modified": "2023-04-28T16:47:36Z",
+            "blockchain": "ethereum, bsc",
+            "value": "0xed1afc8c4604958c2f38a3408fa63b32e737c428"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5dc6b75c-c1ff-4f6e-8388-5b587eb0751a",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "relationship_type": "uses",
+            "source_ref": "identity--b99a878f-5033-462b-821e-0f28a855eeb0",
+            "target_ref": "x-defi-address--db9a9845-9f67-4704-b6fe-71c390f29118"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--57164a56-23d8-4b08-a2ba-01b779b46bf5",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--b38213e3-1148-4dd0-b145-355eb7eb22f3",
+            "target_ref": "identity--b99a878f-5033-462b-821e-0f28a855eeb0"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2333235b-5db4-4a94-9af7-6852dced59a5",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--088aee90-a0e9-48c3-9941-9c2be399e266",
+            "target_ref": "identity--b99a878f-5033-462b-821e-0f28a855eeb0"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--fcd822da-2bf8-4995-983f-828900332265",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "name": "Transit Finance 22.10.01",
+            "description": "On October 1, 2022 Transit Finance users were targeted        using a function parameter injection bug in the DEX\u2019s contract.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-10-01T00:00:00Z",
+            "object_refs": [
+                "threat-actor--b38213e3-1148-4dd0-b145-355eb7eb22f3",
+                "identity--b99a878f-5033-462b-821e-0f28a855eeb0"
+            ],
+            "external_references": [
+                {
+                    "source_name": "GitHub",
+                    "url": "https://github.com/SunWeb3Sec/DeFiHackLabs/blob/main/src/test/TransitSwap_exp.sol"
+                },
+                {
+                    "source_name": "Medium",
+                    "url": "https://medium.com/@TransitSwap/updates-about-transitfinance-4731c38d6910"
+                },
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/transit-swap-rekt/"
+                },
+                {
+                    "source_name": "Medium",
+                    "url": "https://slowmist.medium.com/cross-chain-dex-aggregator-transit-swap-hacked-analysis-74ba39c22020"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/1nf0s3cpt/status/1576511552592543745"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/peckshield/status/1576419241414524929"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/SlowMist_Team/status/1576488479357214721"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/supremacy_ca/status/1576332076277993475"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/TransitFinance/status/1576463550557483008"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 28900000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--c48d217a-479e-4998-8d81-1bacea3e54dd",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "content": "$28.9M were lost according to Transit Finance.        However, $18.9M were promptly returned after the discovery        of attacker\u2019s multiple transactions with centralized exchanges.        One of the attacker\u2019s transactions was also front-run for $1M by an MEV bot.",
+            "object_refs": [
+                "report--fcd822da-2bf8-4995-983f-828900332265"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--e838bdba-696e-4cd9-b6b3-34f4b6f9e91a",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "content": "Though the vulnerability was in the project\u2019s code, this attack targeted        the users directly via a vulnerability in the use of the transferFrom()        function. Any tokens approved for trading on Transit Swap could be        transferred directly from users\u2019 wallets to the unknown exploiter\u2019s address.",
+            "object_refs": [
+                "report--fcd822da-2bf8-4995-983f-828900332265"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--49f2b155-657f-4044-9d6c-37700a423733",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "content": "Root cause of this attack: a controllable `transferFrom()` external call",
+            "object_refs": [
+                "report--fcd822da-2bf8-4995-983f-828900332265"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--64be173a-d98a-481e-bc67-cd3153fd1226",
+            "created": "2023-04-28T16:47:36.000Z",
+            "modified": "2023-04-28T16:47:36.000Z",
+            "content": "20221002 Transit Swap - Incorrect owner address validation\n        Testing\n        \n        forge test --contracts src/test/TransitSwap_exp.sol -vv\n        \n        Contract\n        https://github.com/SunWeb3Sec/DeFiHackLabs/blob/main/src/test/TransitSwap_exp.sol\n        \n        Link reference\n        https://twitter.com/TransitFinance/status/1576463550557483008\n        \n        https://twitter.com/1nf0s3cpt/status/1576511552592543745\n        \n        https://bscscan.com/tx/0x181a7882aac0eab1036eedba25bc95a16e10f61b5df2e99d240a16c334b9b189\n",
+            "object_refs": [
+                "report--fcd822da-2bf8-4995-983f-828900332265"
+            ]
+        }
+    ]
+}

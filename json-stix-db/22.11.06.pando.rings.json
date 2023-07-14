@@ -1,0 +1,286 @@
+{
+    "type": "bundle",
+    "id": "bundle--e0903511-6f7e-4849-96fc-05e49294defa",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "Pando Rings Attacker",
+            "description": "The attacker exploited a vulnerability in Pando Rings price oracle and manipulated the price of sBTC-WBTC"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--dd0f40ca-77d7-471f-b4c6-80b4b4f543e5",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "f059c0ee-cde3-3db9-9079-1aff956172c0",
+            "description": "mixin wallet ID of the Pando Ring Attacker 00",
+            "pattern": "[x-defi-address:value = 'f059c0ee-cde3-3db9-9079-1aff956172c0' AND x-defi-address:blockchain = 'mixin']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-04T03:02:36Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--355aa97f-caeb-43b5-b38c-23d7bbcb61a1",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "d3a935af-ccc4-3cca-98a0-b1b7a9cc53ca",
+            "description": "mixin wallet ID of the Pando Ring Attacker 01",
+            "pattern": "[x-defi-address:value = 'd3a935af-ccc4-3cca-98a0-b1b7a9cc53ca' AND x-defi-address:blockchain = 'mixin']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-04T03:02:36Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--b7fdb211-a367-4598-9205-451551178459",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "0xd3f04cE2d37b182432e2f804F9913a02071CEa54",
+            "description": "Pando Ring Attacker address",
+            "pattern": "[x-defi-address:value = '0xd3f04cE2d37b182432e2f804F9913a02071CEa54' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-04T03:02:36Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--f4033f25-3d37-4855-a236-2bf860cd30b5",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "entofkdupows",
+            "description": "Pando Ring Attacker address",
+            "pattern": "[x-defi-address:value = 'entofkdupows' AND x-defi-address:blockchain = 'eos']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-04T03:02:36Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7c920db5-5a7f-4365-9687-1228e43e2da9",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "bc1qjnsx0sdxksh4w2azwu5ngr8sax46vcu52ljfcx",
+            "description": "Pando Ring Attacker address",
+            "pattern": "[x-defi-address:value = 'bc1qjnsx0sdxksh4w2azwu5ngr8sax46vcu52ljfcx' AND x-defi-address:blockchain = 'bitcoin']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-04T03:02:36Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--da436c67-ee94-4eb7-80bb-857b20b42737",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--dd0f40ca-77d7-471f-b4c6-80b4b4f543e5",
+            "target_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--50727d22-42ad-4222-9c2e-f182dc424313",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--355aa97f-caeb-43b5-b38c-23d7bbcb61a1",
+            "target_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--201af00a-4845-4086-b562-af311e244a22",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--b7fdb211-a367-4598-9205-451551178459",
+            "target_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--fa1b4f61-ce41-471e-97a9-dc4cc9b9ddd4",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--f4033f25-3d37-4855-a236-2bf860cd30b5",
+            "target_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--f445c865-d30c-46ca-8877-1fb84996af53",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--7c920db5-5a7f-4365-9687-1228e43e2da9",
+            "target_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--cb9ee27e-2316-4bae-a5d9-2dfd40bf0c8e",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "Price oracle manipulation",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_layer": "PRO",
+            "x_defi_taxonomy_incident_type": "On-chain oracle manipulation",
+            "x_defi_taxonomy_incident_cause": "Unsafe Dependency"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--131a8447-4acb-48b7-8de5-b931239f1f1d",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa",
+            "target_ref": "attack-pattern--cb9ee27e-2316-4bae-a5d9-2dfd40bf0c8e"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--c5ee9ce3-319d-44c4-b91a-3d4b6489ad6d",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "Pando Rings",
+            "description": "Lending Pool",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Pando Rings",
+                    "url": "https://pando.im/rings/"
+                }
+            ]
+        },
+        {
+            "type": "x-defi-address",
+            "spec_version": "2.1",
+            "id": "x-defi-address--b69ee677-990c-485c-8c84-3b0a9657e264",
+            "name": "0x3e99920e6c40971655e19ad0598454992210499f",
+            "description": "ETH Message to the Pando Rings attacker",
+            "created": "2023-05-04T03:02:36Z",
+            "modified": "2023-05-04T03:02:36Z",
+            "blockchain": "ethereum",
+            "value": "0x3e99920e6c40971655e19ad0598454992210499f"
+        },
+        {
+            "type": "x-defi-transaction",
+            "spec_version": "2.1",
+            "id": "x-defi-transaction--0385b02b-05bd-4dea-ae85-4674e6dd2eb0",
+            "name": "0xfc453378ee7386c43f70836ded62db92b5364a4c4d2c0fe02c3aaa57c95b2241",
+            "description": "ETH Message to the Pando Rings attacker",
+            "created": "2023-05-04T03:02:36Z",
+            "modified": "2023-05-04T03:02:36Z",
+            "blockchain": "ethereum",
+            "value": "0xfc453378ee7386c43f70836ded62db92b5364a4c4d2c0fe02c3aaa57c95b2241"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--620d5631-70ff-46ae-936f-a37a7053b44b",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "uses",
+            "source_ref": "identity--c5ee9ce3-319d-44c4-b91a-3d4b6489ad6d",
+            "target_ref": "x-defi-address--b69ee677-990c-485c-8c84-3b0a9657e264"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e81b4792-ea5c-4572-ab03-78b43a3085a7",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "uses",
+            "source_ref": "identity--c5ee9ce3-319d-44c4-b91a-3d4b6489ad6d",
+            "target_ref": "x-defi-transaction--0385b02b-05bd-4dea-ae85-4674e6dd2eb0"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--19284a5c-f231-4191-9b73-73f9ad8027fa",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa",
+            "target_ref": "identity--c5ee9ce3-319d-44c4-b91a-3d4b6489ad6d"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--23452b02-4730-4d9a-a38f-b74d4a8de401",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--cb9ee27e-2316-4bae-a5d9-2dfd40bf0c8e",
+            "target_ref": "identity--c5ee9ce3-319d-44c4-b91a-3d4b6489ad6d"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--ec6d2773-e2eb-46d5-a73c-92daa23b4063",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "name": "Pando Rings 22.11.06",
+            "description": "The attacker exploited a vulnerability in Pando Rings        price oracle and manipulated the price of sBTC-WBTC        (liquidity provider token of the trading pair BTC-WBTC on 4swap)        to attempt a theft of approximately $70 million worth of crypto assets.        $21,877,098.03 worth of crypto assets including ETH, EOS and BTC        were transferred out from the attacker's two perpetrating Mixin wallets        before measures could be taken.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-11-06T00:00:00Z",
+            "object_refs": [
+                "threat-actor--699f646f-460f-478b-9d5a-99eae9b61caa",
+                "identity--c5ee9ce3-319d-44c4-b91a-3d4b6489ad6d"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/pando_im/status/1589045252413100032"
+                },
+                {
+                    "source_name": "Web3 is Going Great",
+                    "url": "https://web3isgoinggreat.com/?id=pando-exploited-for-20-million"
+                },
+                {
+                    "source_name": "Pando Rings",
+                    "url": "https://pando.im/news/2022/2022-11-06-alert-to-pando-community-hack-of-pando-rings/"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 20000000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--b3dace20-4187-47d4-a0a0-37ed53d0a80e",
+            "created": "2023-05-04T03:02:36.000Z",
+            "modified": "2023-05-04T03:02:36.000Z",
+            "content": "A message to the hacker if you are reading this:\n    We have sent two messages from the address 0x3e99920e6c40971655e19ad0598454992210499f.\n    There are consequences for your perpetrating the theft.\n    Even not now, it will be only a matter of time.\n    The communication channel is still open.\n    Please be in touch and we can negotiate what\n    can be done in exchange for the returning of the funds",
+            "object_refs": [
+                "report--ec6d2773-e2eb-46d5-a73c-92daa23b4063"
+            ]
+        }
+    ]
+}

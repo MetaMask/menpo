@@ -1,0 +1,188 @@
+{
+    "type": "bundle",
+    "id": "bundle--b37651b3-0078-46cc-a452-6bb4b5bf1409",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--013da64e-4f1d-4ba6-88b7-1deed70ae01a",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Mango Markets Attacker",
+            "description": "Identified as Avraham Eisenberg"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--ed15ce4f-a05b-4c40-bb73-eb045fbc467b",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Avraham Eisenberg",
+            "description": "Mango Markets Attacker",
+            "identity_class": "individual",
+            "sectors": [
+                "financial-services",
+                "technology"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Substack",
+                    "url": "http://deepfivalue.substack.com"
+                },
+                {
+                    "source_name": "Substack",
+                    "url": "http://misinfounderload.substack.com"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/avi_eisen"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/avi_eisen/status/1581326197241180160"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--8d274237-1e0e-46d1-8262-04538282266b",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "threat-actor--013da64e-4f1d-4ba6-88b7-1deed70ae01a",
+            "target_ref": "identity--ed15ce4f-a05b-4c40-bb73-eb045fbc467b"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3fc4d4e3-60fc-4c4b-b38b-b7bf1808c13f",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "yUJw9a2PyoqKkH47i4yEGf4WXomSHMiK7Lp29Xs2NqM",
+            "description": "Mango Markets Attacker Address",
+            "pattern": "[x-defi-address:value = 'yUJw9a2PyoqKkH47i4yEGf4WXomSHMiK7Lp29Xs2NqM' AND x-defi-address:blockchain = 'solana']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6de9268f-a614-444b-888c-82dd3ccd9af2",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--3fc4d4e3-60fc-4c4b-b38b-b7bf1808c13f",
+            "target_ref": "threat-actor--013da64e-4f1d-4ba6-88b7-1deed70ae01a"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--b2aa6f47-6081-46bd-b9a9-133839aa94b0",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Price Manipulation",
+            "description": "Mango Markets later clarified that the incident was not    an oracle failure, but rather genuine price manipulation.",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_layer": "PRO",
+            "x_defi_taxonomy_incident_cause": "Unsafe dependency",
+            "x_defi_taxonomy_incident_type": "On-chain oracle manipulation"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--34fc8872-99cd-4257-ac05-a250bbadec78",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--013da64e-4f1d-4ba6-88b7-1deed70ae01a",
+            "target_ref": "attack-pattern--b2aa6f47-6081-46bd-b9a9-133839aa94b0"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--11ca51a4-3852-46f3-9d16-e9b322dcc6ce",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Mango Markets",
+            "description": "Mango Markets is a decentralized trading platform built on the Solana blockchain.",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Mango Markets",
+                    "url": "https://mango.markets/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--495407b5-ee48-4c9e-b116-55f9f05835d4",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--013da64e-4f1d-4ba6-88b7-1deed70ae01a",
+            "target_ref": "identity--11ca51a4-3852-46f3-9d16-e9b322dcc6ce"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--355c3d13-893f-4cc4-b524-88a41c8d1637",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--b2aa6f47-6081-46bd-b9a9-133839aa94b0",
+            "target_ref": "identity--11ca51a4-3852-46f3-9d16-e9b322dcc6ce"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--601226a1-9e58-4a56-b4a4-65e8993cdc96",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Mango Markets 22.10.11",
+            "description": "On October 11, 2022 Mango Markets was exploited with a        price oracle manipulation attack with losses over $116M.        Interestingly, the attacker was soon discovered and engaged        in public discourse on Twitter.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-09-01T00:00:00Z",
+            "object_refs": [
+                "threat-actor--013da64e-4f1d-4ba6-88b7-1deed70ae01a",
+                "identity--11ca51a4-3852-46f3-9d16-e9b322dcc6ce"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/mango-markets-rekt/"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/avi_eisen/status/1581326197241180160"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/joshua_j_lim/status/1579987648546246658"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/mangomarkets/status/1580074498174652416"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 116000000
+        }
+    ]
+}

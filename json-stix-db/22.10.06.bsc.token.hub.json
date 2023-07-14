@@ -1,0 +1,257 @@
+{
+    "type": "bundle",
+    "id": "bundle--687ece99-65ba-483f-af7f-9906770572e1",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--d0cf4bb4-410e-42dc-8231-973627a6d972",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "BSC Token Hub Attacker",
+            "description": "On October 6, 2022 BSC Token Hub lost $586M due to an exploit bypassing cross-chain transfer proofs."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--7ae39992-7bbf-4cf8-bb7f-62f126348a24",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x489a8756c18c0b8b24ec2a2b9ff3d4d447f79bec",
+            "description": "BSC Token Hub Attacker Address",
+            "pattern": "[x-defi-address:value = '0x489a8756c18c0b8b24ec2a2b9ff3d4d447f79bec' AND x-defi-address:blockchain = 'bsc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e7eff2b7-14c2-4114-975f-5a225ec9c1b2",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--7ae39992-7bbf-4cf8-bb7f-62f126348a24",
+            "target_ref": "threat-actor--d0cf4bb4-410e-42dc-8231-973627a6d972"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--10d804f3-5419-429d-8402-05d586939698",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Exploit bypassing cross-chain transfer proofs",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_incident_cause": "Unsafe dependency",
+            "x_defi_taxonomy_incident_type": "Other unsafe DeFi protocol dependency",
+            "x_defi_taxonomy_layer": "PRO"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--529a6894-4ef9-4f96-8f0c-f2f5ec696e48",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--d0cf4bb4-410e-42dc-8231-973627a6d972",
+            "target_ref": "attack-pattern--10d804f3-5419-429d-8402-05d586939698"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--46e05f78-d96a-4cae-b5ef-6727dd036611",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "BSC Token Hub",
+            "description": "The BNB bridge between the old Binance Beacon Chain and BSC.",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BSC Token Hub",
+                    "url": "https://www.bnbchain.org/cn/bridge"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--69243477-5c4c-4e16-8035-0782899da8b2",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--d0cf4bb4-410e-42dc-8231-973627a6d972",
+            "target_ref": "identity--46e05f78-d96a-4cae-b5ef-6727dd036611"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7f07414a-5066-4e98-8437-91ba0b9a30f4",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--10d804f3-5419-429d-8402-05d586939698",
+            "target_ref": "identity--46e05f78-d96a-4cae-b5ef-6727dd036611"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--960e073a-24de-475e-ba3f-53c41481f3eb",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "BSC Token 2022.10.06",
+            "description": "('On October 6, 2022 BSC Token Hub lost $586M due to an exploit bypassing cross-chain transfer proofs.', 'Following the compromise, BSC shut down the network preventing attackers from transferring majority of stolen assets.')",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-10-06T00:00:00Z",
+            "object_refs": [
+                "threat-actor--d0cf4bb4-410e-42dc-8231-973627a6d972",
+                "identity--46e05f78-d96a-4cae-b5ef-6727dd036611"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Medium",
+                    "url": "https://drdr-zz.medium.com/bnb-bridge-hack-eli5-explained-and-visualised-1fb2837c7a7e"
+                },
+                {
+                    "source_name": "GitHub",
+                    "url": "https://github.com/emilianobonassi/bsc-hack-analysis-2022-10-06"
+                },
+                {
+                    "source_name": "Rekt News",
+                    "url": "https://rekt.news/bnb-bridge-rekt/"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/cz_binance/status/1578171072067031042"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/dedaub/status/1578428002701959170"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/emilianobonassi/status/1578742880662716416"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/samczsun/status/1578167198203289600"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/samczsun/status/1578182840751050752"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/SlowMist_Team/status/1578220472373649408"
+                },
+                {
+                    "source_name": "Nansen",
+                    "url": "https://www.nansen.ai/research/bnb-chains-cross-chain-bridge-exploit-explained"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 585000000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--017ad611-df42-4610-828b-f85f9e7898a5",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "2022-10-06T18:26:00Z - Attacker succeeded in delivering a 1m BNB package to its own address.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--f581b597-2517-4263-9b6e-832f74148e52",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "2022-10-06T20:43:00Z - Attacker succeeded in delivering the last 1m BNB package to its own address.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--b86d5082-cdef-4ada-aa5f-dcc42582b88c",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Bridge used vulnerable IAVL verification (block 110217401, August 2020).",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--f89043ef-ad3f-4a4c-bdcf-23070ed3f597",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Vulnerability handling (1): Binance Smart Chain halted.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--ab4ca8de-09fc-4ab3-ac98-061236c920c3",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Vulnerability handling (2): Blacklist functionality added; attacker's address hardcoded.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--b33af936-ead3-40a1-9efe-408aa72c15ea",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Vulnerability handling (3): Precompiled contract for Merkle proof verification suspended, restored 5 days later.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--cf23a549-ee82-4528-a3d2-3713bab745ee",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Root cause: bridge code didn't account for user-set Left and Right attributes in path nodes.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--fadb427e-5783-40f8-8045-f41da8a50c7c",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "Summary: Bug in Binance Bridge proof verification allowed attackers to forge arbitrary messages.",
+            "object_refs": [
+                "report--960e073a-24de-475e-ba3f-53c41481f3eb"
+            ]
+        }
+    ]
+}

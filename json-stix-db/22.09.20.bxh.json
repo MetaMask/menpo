@@ -1,0 +1,221 @@
+{
+    "type": "bundle",
+    "id": "bundle--091a9583-3358-4c3c-8a70-77da4c452195",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "BXH Attacker",
+            "description": "('On September 20th, 2022, Boy X Highspeed (BXH) \u2013', 'a financial services platform for Web3 and metaverse related assets \u2013', 'has suffered a loss of at least $2.4 million across its operations o', 'BSC, Avalanche, and HECO Chain.')"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--16b77d72-8427-4b0b-bd62-a91f31e4921e",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0xafc6e88c90334618e73eadc04b0f9dc0482f7be3",
+            "description": "('repeatedly invoked the privileged function `InCaseTokensGetStuck()`', 'on the project\u2019s staking pool contracts on BSC, Avalanche, and HECO Chain.')",
+            "pattern": "[x-defi-address:value = '0xafc6e88c90334618e73eadc04b0f9dc0482f7be3' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--3ebd2e2b-7961-4549-9418-ba3abb99560e",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0xded6b4361cb202adc9e33fc635b5f4481b2879c696d7e843793c886706306cde",
+            "description": "The attacker bridged a total of 1,228.73 ETH from BSC to Ethereum, 267.34 ETHfrom Avalanche to Ethereum, and 105.49 ETH from HECO Chain to EthereumFunds sent to Tornado Cash to be laundered.",
+            "pattern": "[x-defi-transaction:value = '0xded6b4361cb202adc9e33fc635b5f4481b2879c696d7e843793c886706306cde' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--68ebea19-5963-4c59-8058-ab60ea1ba7df",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x298729e1098823beac9f83e1d1b10f25a89c50d3ed6f68738b94a09f2985b0b0",
+            "description": "The attacker bridged a total of 1,228.73 ETH from BSC to Ethereum, 267.34 ETHfrom Avalanche to Ethereum, and 105.49 ETH from HECO Chain to EthereumFunds sent to Tornado Cash to be laundered.",
+            "pattern": "[x-defi-transaction:value = '0x298729e1098823beac9f83e1d1b10f25a89c50d3ed6f68738b94a09f2985b0b0' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ec2a22bf-a5c0-4679-8d57-6ee86cc3a045",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "0x9b4a9a12ad154342960d116f2b9c59539dfef47646ba0ce9557d5e3d960add88",
+            "description": "The attacker bridged a total of 1,228.73 ETH from BSC to Ethereum, 267.34 ETHfrom Avalanche to Ethereum, and 105.49 ETH from HECO Chain to EthereumFunds sent to Tornado Cash to be laundered.",
+            "pattern": "[x-defi-transaction:value = '0x9b4a9a12ad154342960d116f2b9c59539dfef47646ba0ce9557d5e3d960add88' AND x-defi-address:blockchain = 'ethereum']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-04-19T00:00:00Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--7f69a789-afb4-4a55-8150-aaffaa5e8bd3",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--16b77d72-8427-4b0b-bd62-a91f31e4921e",
+            "target_ref": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--45ace1b2-b334-4c94-a8f0-b685897e491a",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--3ebd2e2b-7961-4549-9418-ba3abb99560e",
+            "target_ref": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--aea71bdd-b648-40eb-be16-92f1f3c665c8",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--68ebea19-5963-4c59-8058-ab60ea1ba7df",
+            "target_ref": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--76e1bee0-c20b-4873-87b4-879e27345595",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--ec2a22bf-a5c0-4679-8d57-6ee86cc3a045",
+            "target_ref": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--e13e86ce-c7c7-48ed-a0f8-13e487403d8b",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "Invocation of privileged function",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_incident_type": "Inconsistent access control",
+            "x_defi_taxonomy_layer": "SC",
+            "x_defi_taxonomy_incident_cause": "Access control mistake"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a84d18a5-86cb-4059-b9df-f3665f9b48c2",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee",
+            "target_ref": "attack-pattern--e13e86ce-c7c7-48ed-a0f8-13e487403d8b"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--fff935da-b89e-4c42-88a7-a578fd340f19",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "BXH",
+            "description": "('Boy X Highspeed (BXH)', 'Financial services platform for web3 & the Metaverse')",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BXH",
+                    "url": "https://bxh.com"
+                },
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/BXH_Blockchain"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--71ba2df2-1cd8-4983-a6fd-0c391cad73ea",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee",
+            "target_ref": "identity--fff935da-b89e-4c42-88a7-a578fd340f19"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--44b7e73f-86ea-4940-ba64-7b172deecc75",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--e13e86ce-c7c7-48ed-a0f8-13e487403d8b",
+            "target_ref": "identity--fff935da-b89e-4c42-88a7-a578fd340f19"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--099a1298-b34f-4feb-848e-d31697de5df0",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "name": "BXH 2022.09.20",
+            "description": "('On September 20th, 2022, Boy X Highspeed (BXH) \u2013', 'a financial services platform for Web3 and metaverse related assets \u2013', 'has suffered a loss of at least $2.4 million across its operations on', 'BSC, Avalanche, and HECO Chain.')",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-09-20T00:00:00Z",
+            "object_refs": [
+                "threat-actor--1fa592cc-784e-4853-884e-0246350d9bee",
+                "identity--fff935da-b89e-4c42-88a7-a578fd340f19"
+            ],
+            "external_references": [
+                {
+                    "source_name": "CertiK",
+                    "url": "https://www.certik.com/resources/blog/2eUD4Nbh0B37jw1UdxgA04-boy-x-highspeed-incident-analysis"
+                },
+                {
+                    "source_name": "BXH - English",
+                    "url": "https://bxh.gitbook.io/english/notice/923latestnewsE"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 0
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--82c71d1c-38bd-485a-9459-c488bda76c29",
+            "created": "2023-04-19T00:00:00.000Z",
+            "modified": "2023-04-19T00:00:00.000Z",
+            "content": "BXH was not audited by CertiK. The \u201cemergency function\u201d InCaseTokensGetStuck()    would have been flagged as a severe centralization risk in an audit.    Functions such as this are a risk on multiple levels.    They give privileged accounts the ability to drain affected contracts of all funds,    which opens the door to malicious insiders taking advantage of this power,    while also providing a prime target for phishers.",
+            "object_refs": [
+                "report--099a1298-b34f-4feb-848e-d31697de5df0"
+            ]
+        }
+    ]
+}

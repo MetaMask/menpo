@@ -1,0 +1,148 @@
+{
+    "type": "bundle",
+    "id": "bundle--6c522433-8e75-4dfd-abc1-543246ec1db7",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--5d59ba2c-745b-4d97-9150-44b4ccc2dd79",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "name": "BabySwap Attacker",
+            "description": "On October 1, 2022 BabySwap lost $65K in a reward manipulation exploit."
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--ed774bc7-5191-4a4e-a915-5d2aa5f51d5c",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "name": "0xcca7ea9d48e00e7e32e5d005b57ec3cac28bc3ad0181e4ca208832e62aa52efe",
+            "description": "BabySwap Attack Transaction",
+            "pattern": "[x-defi-transaction:value = '0xcca7ea9d48e00e7e32e5d005b57ec3cac28bc3ad0181e4ca208832e62aa52efe' AND x-defi-address:blockchain = 'bsc']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2023-05-02T02:20:53Z"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3b33876f-0cef-4e16-9fa9-f23fca28351e",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "relationship_type": "indicates",
+            "source_ref": "indicator--ed774bc7-5191-4a4e-a915-5d2aa5f51d5c",
+            "target_ref": "threat-actor--5d59ba2c-745b-4d97-9150-44b4ccc2dd79"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--53cd39b3-4985-412c-bee9-21ee301949e3",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "name": "Reward manipulation exploit",
+            "extensions": {
+                "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_taxonomy_incident_type": "Absence of coding logic or sanity check",
+            "x_defi_taxonomy_incident_cause": "Coding Mistake",
+            "x_defi_taxonomy_layer": "SC"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6f8394a3-6fd6-4dad-b53e-25298e695b0b",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--5d59ba2c-745b-4d97-9150-44b4ccc2dd79",
+            "target_ref": "attack-pattern--53cd39b3-4985-412c-bee9-21ee301949e3"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--c5d3a652-b573-43e0-a080-fe73b7076055",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "name": "BabySwap",
+            "description": "MetaFi platform on the BNB Chain",
+            "identity_class": "organization",
+            "sectors": [
+                "financial-services"
+            ],
+            "external_references": [
+                {
+                    "source_name": "BabySwap",
+                    "url": "https://home.babyswap.finance/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--245728d1-8740-4caa-85b6-b13133fd2316",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "relationship_type": "targets",
+            "source_ref": "threat-actor--5d59ba2c-745b-4d97-9150-44b4ccc2dd79",
+            "target_ref": "identity--c5d3a652-b573-43e0-a080-fe73b7076055"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--4400c38a-10c2-4226-b6f6-fd65d4d8180f",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "relationship_type": "targets",
+            "source_ref": "attack-pattern--53cd39b3-4985-412c-bee9-21ee301949e3",
+            "target_ref": "identity--c5d3a652-b573-43e0-a080-fe73b7076055"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--083afffa-8bb1-4bac-986b-5cd60c73bef9",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "name": "BabySwap 22.10.01",
+            "description": "On October 1, 2022 BabySwap lost $65K in a reward manipulation exploit.",
+            "report_types": [
+                "threat-actor",
+                "attack-pattern"
+            ],
+            "published": "2022-10-01T00:00:00Z",
+            "object_refs": [
+                "threat-actor--5d59ba2c-745b-4d97-9150-44b4ccc2dd79",
+                "identity--c5d3a652-b573-43e0-a080-fe73b7076055"
+            ],
+            "external_references": [
+                {
+                    "source_name": "Twitter",
+                    "url": "https://twitter.com/BlockSecTeam/status/1576441612812836865"
+                },
+                {
+                    "source_name": "Medium",
+                    "url": "https://blocksecteam.medium.com/how-we-recover-the-stolen-funds-for-transitswap-and-babyswap-2a68c9f4d66f"
+                }
+            ],
+            "extensions": {
+                "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+                    "extension_type": "toplevel-property-extension"
+                }
+            },
+            "x_defi_estimated_loss_usd": 65000
+        },
+        {
+            "type": "note",
+            "spec_version": "2.1",
+            "id": "note--fe23cb4b-2d77-4be5-98b1-da2e613de2d7",
+            "created": "2023-05-02T02:20:53.000Z",
+            "modified": "2023-05-02T02:20:53.000Z",
+            "content": "Bot account that front ra1n the original attack transaction.    This account has a pattern with eight leading zeros,    looks like it\u2019s generated by the profanity tool,    which is vulnerable to the profanity tool vulnerability.    https://blog.1inch.io/a-vulnerability-disclosed-in-profanity-an-ethereum-vanity-address-tool-68ed7455fc8c",
+            "object_refs": [
+                "report--083afffa-8bb1-4bac-986b-5cd60c73bef9"
+            ]
+        }
+    ]
+}
