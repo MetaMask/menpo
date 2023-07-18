@@ -6,11 +6,12 @@ DeFi Incidents in STIX 2.1.
 
 ## Menpo Research Whitepaper
 
-[Google Docs Link](https://docs.google.com/document/d/1bmbzHYu9s5DTgSinJXHdFWjBWla43jV1G6SnX3X8OB4/edit)
+* [Google Docs Link](https://docs.google.com/document/d/1bmbzHYu9s5DTgSinJXHdFWjBWla43jV1G6SnX3X8OB4/edit)
 
 ## Menpo Presentation at DeFi Security Summit - 15.JUL.2023
 
-[Google Slides Link](https://docs.google.com/presentation/d/1Xriaat4ZoanBRS06g9wi3tRj__dTWr1_wpSg2yyqaw4/edit#slide=id.p)
+* [Youtube Video](https://www.youtube.com/watch?v=D4qRiKpj1go)
+* [Google Slides Link](https://docs.google.com/presentation/d/1Xriaat4ZoanBRS06g9wi3tRj__dTWr1_wpSg2yyqaw4/edit#slide=id.p)
 
 ## Using Python to generate STIX objects
 
