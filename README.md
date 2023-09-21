@@ -69,16 +69,8 @@ for report in sorted_reports:
   print("-", report.name)
 ```
 
-### Getting a <some relational query I have to figure out>
-
-```python
-# TODO
-```
-
 ### Generate a json report and render it on the STIX visualizer
 
 ```python
 # TODO
-
-# Maybe create a tmp file, and give that as a ref to the browser?
 ```
