@@ -1,0 +1,16 @@
+{
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "id": "attack-pattern--1c53794c-de65-4f0d-aee9-0bec7d98064a",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "name": "Function parameter injection bug",
+    "extensions": {
+        "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_taxonomy_layer": "SC",
+    "x_defi_taxonomy_incident_cause": "Coding mistake",
+    "x_defi_taxonomy_incident_type": "Absence of coding logic or sanity check"
+}

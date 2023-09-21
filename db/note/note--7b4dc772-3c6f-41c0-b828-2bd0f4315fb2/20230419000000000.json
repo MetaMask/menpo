@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--7b4dc772-3c6f-41c0-b828-2bd0f4315fb2",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "The read-only reentrancy is a reentrancy scenario where a `view` function is reentered, which in most cases is unguarded as it does not modify the contract’s state.",
+    "object_refs": [
+        "report--0b78c229-94d6-48b2-901d-645988f8a988"
+    ]
+}

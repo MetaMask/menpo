@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--75ee99ae-21d1-4a46-9200-e806a29287b1",
+    "created": "2023-05-01T01:09:29.000Z",
+    "modified": "2023-05-01T01:09:29.000Z",
+    "name": "0xb0606f433496bf66338b8ad6b6d51fc4d84a44cd",
+    "description": "Deribit Attacker Ethereum Address",
+    "pattern": "[x-defi-address:value = '0xb0606f433496bf66338b8ad6b6d51fc4d84a44cd' AND x-defi-address:blockchain = 'ethereum']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-05-01T01:09:29Z"
+}

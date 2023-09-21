@@ -1,0 +1,11 @@
+{
+    "type": "x-defi-address",
+    "spec_version": "2.1",
+    "id": "x-defi-address--2ead8a23-ac7a-49de-a595-71cb04c614fc",
+    "name": "1ECNeZyiHgqJmv42i3pkWY48xiXy7KukTG",
+    "description": "Bo Shen address",
+    "created": "2023-04-19T00:00:00Z",
+    "modified": "2023-04-19T00:00:00Z",
+    "blockchain": "bitcoin",
+    "value": "1ECNeZyiHgqJmv42i3pkWY48xiXy7KukTG"
+}

@@ -1,0 +1,11 @@
+{
+    "type": "x-defi-address",
+    "spec_version": "2.1",
+    "id": "x-defi-address--2edbf936-f854-416b-82fb-26bca6f04221",
+    "name": "0x5bca7ddf1bcccb2ee8e46c56bfc9d3cdc77262bc",
+    "description": "Midas Capital Readonly Reentrancy Vulnerable Contract",
+    "created": "2023-04-19T00:00:00Z",
+    "modified": "2023-04-19T00:00:00Z",
+    "blockchain": "polygon",
+    "value": "0x5bca7ddf1bcccb2ee8e46c56bfc9d3cdc77262bc"
+}

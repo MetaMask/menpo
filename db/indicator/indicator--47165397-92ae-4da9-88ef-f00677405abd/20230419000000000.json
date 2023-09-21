@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--47165397-92ae-4da9-88ef-f00677405abd",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "0x9d0163e76bbcf776001e639d65f573949a53ab03",
+    "description": "LendHub attacker address",
+    "pattern": "[x-defi-address:value = '0x9d0163e76bbcf776001e639d65f573949a53ab03' AND x-defi-address:blockchain = 'ethereum']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-04-19T00:00:00Z"
+}

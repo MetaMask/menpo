@@ -1,0 +1,34 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--109b6f74-e4b6-4057-b72d-507ade476427",
+    "created": "2023-05-02T02:20:53.000Z",
+    "modified": "2023-05-02T02:20:53.000Z",
+    "name": "BabySwap 22.10.01",
+    "description": "On October 1, 2022 BabySwap lost $65K in a reward manipulation exploit.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-10-01T00:00:00Z",
+    "object_refs": [
+        "threat-actor--9a56b279-bbe9-4a17-ab4e-2b7cfac9c261",
+        "identity--6d4f910a-d52f-48cc-867c-f9baeef6d679"
+    ],
+    "external_references": [
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/BlockSecTeam/status/1576441612812836865"
+        },
+        {
+            "source_name": "Medium",
+            "url": "https://blocksecteam.medium.com/how-we-recover-the-stolen-funds-for-transitswap-and-babyswap-2a68c9f4d66f"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 65000
+}

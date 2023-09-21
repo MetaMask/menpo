@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--497561c5-1ba0-467a-9454-14ef554df0d5",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "content": "20221002 Transit Swap - Incorrect owner address validation\n        Testing\n        \n        forge test --contracts src/test/TransitSwap_exp.sol -vv\n        \n        Contract\n        https://github.com/SunWeb3Sec/DeFiHackLabs/blob/main/src/test/TransitSwap_exp.sol\n        \n        Link reference\n        https://twitter.com/TransitFinance/status/1576463550557483008\n        \n        https://twitter.com/1nf0s3cpt/status/1576511552592543745\n        \n        https://bscscan.com/tx/0x181a7882aac0eab1036eedba25bc95a16e10f61b5df2e99d240a16c334b9b189\n",
+    "object_refs": [
+        "report--dd261c10-3600-4d4d-83d4-37d0beed7681"
+    ]
+}

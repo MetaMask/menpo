@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--db4f34a1-1b12-42d5-8076-368e258a5ce6",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "After the Ankr Exploiter dumped $aBNBc tokens, another user bought 183,885 $aBNBc tokens from 1inch for just 10 $BNB, which were worth about $2,879 at the time the event took place.",
+    "object_refs": [
+        "report--b4267f75-acb6-48f1-894a-8ee6b31590e5"
+    ]
+}

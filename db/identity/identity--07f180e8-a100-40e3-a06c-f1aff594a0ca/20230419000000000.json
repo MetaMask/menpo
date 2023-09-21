@@ -1,0 +1,23 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--07f180e8-a100-40e3-a06c-f1aff594a0ca",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "BXH",
+    "description": "('Boy X Highspeed (BXH)', 'Financial services platform for web3 & the Metaverse')",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "BXH",
+            "url": "https://bxh.com"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/BXH_Blockchain"
+        }
+    ]
+}

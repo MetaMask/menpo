@@ -1,0 +1,62 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--dd261c10-3600-4d4d-83d4-37d0beed7681",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "name": "Transit Finance 22.10.01",
+    "description": "On October 1, 2022 Transit Finance users were targeted        using a function parameter injection bug in the DEX’s contract.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-10-01T00:00:00Z",
+    "object_refs": [
+        "threat-actor--2e936601-b6e7-4ec8-a1be-08e9ce119848",
+        "identity--852a8aa4-eae6-4dc2-bacf-1586a95725ba"
+    ],
+    "external_references": [
+        {
+            "source_name": "GitHub",
+            "url": "https://github.com/SunWeb3Sec/DeFiHackLabs/blob/main/src/test/TransitSwap_exp.sol"
+        },
+        {
+            "source_name": "Medium",
+            "url": "https://medium.com/@TransitSwap/updates-about-transitfinance-4731c38d6910"
+        },
+        {
+            "source_name": "Rekt News",
+            "url": "https://rekt.news/transit-swap-rekt/"
+        },
+        {
+            "source_name": "Medium",
+            "url": "https://slowmist.medium.com/cross-chain-dex-aggregator-transit-swap-hacked-analysis-74ba39c22020"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/1nf0s3cpt/status/1576511552592543745"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/peckshield/status/1576419241414524929"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/SlowMist_Team/status/1576488479357214721"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/supremacy_ca/status/1576332076277993475"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/TransitFinance/status/1576463550557483008"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 28900000
+}

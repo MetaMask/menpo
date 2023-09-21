@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--c2239f09-7863-4c4f-b3fe-cd96150df205",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "BXH Attacker",
+    "description": "('On September 20th, 2022, Boy X Highspeed (BXH) –', 'a financial services platform for Web3 and metaverse related assets –', 'has suffered a loss of at least $2.4 million across its operations o', 'BSC, Avalanche, and HECO Chain.')"
+}

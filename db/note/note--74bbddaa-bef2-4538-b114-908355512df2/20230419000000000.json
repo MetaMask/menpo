@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--74bbddaa-bef2-4538-b114-908355512df2",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "Vulnerability handling (3): Precompiled contract for Merkle proof verification suspended, restored 5 days later.",
+    "object_refs": [
+        "report--8ee1a8e4-f403-48f3-9799-09b12634eef0"
+    ]
+}

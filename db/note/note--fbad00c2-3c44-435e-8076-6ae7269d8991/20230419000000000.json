@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--fbad00c2-3c44-435e-8076-6ae7269d8991",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "Logs cover 18 months; impacted account 19 months old, used only 6 months ago.",
+    "object_refs": [
+        "report--9efcde0b-12c4-4f46-9200-01de7bcb1c94"
+    ]
+}

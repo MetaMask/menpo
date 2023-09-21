@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--4e0cf5f6-2be1-435e-b843-e00e8dd96d03",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "Attack Summary\n    In this case, the attack can be summarized as follows:\n      1. Attacker places a large amount of USDC into Lodestar\n      2. Attacker borrows plsGLP (longtail - high risk asset)\n      3. Attacker lends plsGLP and receives iplsGLP\n      4. Steps 2 and 3 are repeated\n      5. The key issue is that the oracle price of plsGLP is manipulatable - Oracles\n      6. The higher the value of plsGLP the higher the profit is able to be extracted.\n      7. Further the higher the exchange rate of plsGLP to GLP the larger the redemption is possible\n      8. The price of plsGLP was then pushed up by the attacker and they were able to borrow the remaining assets:\n",
+    "object_refs": [
+        "report--d84a0c40-0a43-42ad-b9c6-fe405aa506d7"
+    ]
+}

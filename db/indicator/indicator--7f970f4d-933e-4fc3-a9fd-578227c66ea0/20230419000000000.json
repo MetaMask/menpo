@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--7f970f4d-933e-4fc3-a9fd-578227c66ea0",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "0x59ABf3837Fa962d6853b4Cc0a19513AA031fd32b",
+    "description": "FTX Drainer 00",
+    "pattern": "[x-defi-address:value = '0x59ABf3837Fa962d6853b4Cc0a19513AA031fd32b' AND (x-defi-address:blockchain = 'ethereum' OR x-defi-address:blockchain = 'bsc')]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-04-19T00:00:00Z"
+}

@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--2f5304b4-6ba8-4a74-a387-5c70299edbf2",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "0x9b4a9a12ad154342960d116f2b9c59539dfef47646ba0ce9557d5e3d960add88",
+    "description": "The attacker bridged a total of 1,228.73 ETH from BSC to Ethereum, 267.34 ETHfrom Avalanche to Ethereum, and 105.49 ETH from HECO Chain to EthereumFunds sent to Tornado Cash to be laundered.",
+    "pattern": "[x-defi-transaction:value = '0x9b4a9a12ad154342960d116f2b9c59539dfef47646ba0ce9557d5e3d960add88' AND x-defi-address:blockchain = 'ethereum']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-04-19T00:00:00Z"
+}

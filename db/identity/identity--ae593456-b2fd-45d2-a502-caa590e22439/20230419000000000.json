@@ -1,0 +1,32 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--ae593456-b2fd-45d2-a502-caa590e22439",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Avraham Eisenberg",
+    "description": "Mango Markets Attacker",
+    "identity_class": "individual",
+    "sectors": [
+        "financial-services",
+        "technology"
+    ],
+    "external_references": [
+        {
+            "source_name": "Substack",
+            "url": "http://deepfivalue.substack.com"
+        },
+        {
+            "source_name": "Substack",
+            "url": "http://misinfounderload.substack.com"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/avi_eisen"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/avi_eisen/status/1581326197241180160"
+        }
+    ]
+}

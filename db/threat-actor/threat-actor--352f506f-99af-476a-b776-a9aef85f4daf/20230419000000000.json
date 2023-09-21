@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--352f506f-99af-476a-b776-a9aef85f4daf",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Helio Attacker",
+    "description": "On December 2, 2022 Helio lost $19M as a result of a delayed price oracle."
+}

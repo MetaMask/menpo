@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--21b93861-8ad3-401f-9d13-93dae2ce8ba0",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "The attacker was able to borrow the following assets against the inflated collateral:\n    * jCHF: 273,973\n    * jEUR: 368,058\n    * jGBP: 45,250\n    * agEUR: 45,435\n    * Which were then swapped to ~660k MATIC ($660k) and sent on to Kucoin and Binance.\n",
+    "object_refs": [
+        "report--0b78c229-94d6-48b2-901d-645988f8a988"
+    ]
+}

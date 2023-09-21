@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--be78ceeb-f90d-4d15-ba10-b61293ca8f44",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "f059c0ee-cde3-3db9-9079-1aff956172c0",
+    "description": "mixin wallet ID of the Pando Ring Attacker 00",
+    "pattern": "[x-defi-address:value = 'f059c0ee-cde3-3db9-9079-1aff956172c0' AND x-defi-address:blockchain = 'mixin']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-05-04T03:02:36Z"
+}

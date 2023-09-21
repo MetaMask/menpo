@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--1c1ba1fd-c86f-486e-b875-e67422a7d7e9",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "The Ankr protocol had suffered a governance key compromise, allowing an attacker to mint massive amount of $aBNBc tokens.",
+    "object_refs": [
+        "report--b4267f75-acb6-48f1-894a-8ee6b31590e5"
+    ]
+}

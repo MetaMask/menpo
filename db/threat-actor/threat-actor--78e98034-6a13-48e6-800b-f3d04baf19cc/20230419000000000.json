@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--78e98034-6a13-48e6-800b-f3d04baf19cc",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Midas Capital Attacker",
+    "description": "On January 15, 2023 Midas Capital lost $654K due to a read-only reentrancy vulnerability."
+}

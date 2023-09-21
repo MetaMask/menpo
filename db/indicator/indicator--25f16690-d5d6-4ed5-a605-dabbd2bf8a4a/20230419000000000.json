@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--25f16690-d5d6-4ed5-a605-dabbd2bf8a4a",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "0x8d11f5b4d351396ce41813dce5a32962aa48e217",
+    "description": "Helio Attacker Address",
+    "pattern": "[x-defi-address:value = '0x8d11f5b4d351396ce41813dce5a32962aa48e217' AND x-defi-address:blockchain = 'bsc']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-04-19T00:00:00Z"
+}

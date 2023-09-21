@@ -1,0 +1,50 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--d84a0c40-0a43-42ad-b9c6-fe405aa506d7",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Lodestar 22.12.10",
+    "description": "On December 12th, 2022,    the price oracle of plvGLP collateral was manipulated,    allowing the attacker to drain their lending pools for a profit of ~$6.5M.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-12-10T00:00:00Z",
+    "object_refs": [
+        "threat-actor--78d03908-85f9-427f-bd00-e7745c86559a",
+        "identity--5c08f324-00b9-4440-bb44-b0b4464cf285"
+    ],
+    "external_references": [
+        {
+            "source_name": "Lodestar",
+            "url": "https://blog.lodestarfinance.io/post-mortem-summary-13f5fe0bb336"
+        },
+        {
+            "source_name": "Rekt News",
+            "url": "https://rekt.news/lodestar-rekt/"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/BowTiedPickle/status/1601650177369993216"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/lodestarfinance/status/1601686921566375936"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/SolidityFinance/status/1601684153740963840"
+        },
+        {
+            "source_name": "CertiK",
+            "url": "https://www.certik.com/resources/blog/TqTyq4vYHl8JzS7zyJye9-lodestar-finance-incident-analysis"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 6500000
+}

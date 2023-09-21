@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--d3cf2add-e1f8-4cb9-b29e-068bf311e33a",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "0x57A72cE4fd69eBEdEfC1a938b690fbf11A7Dff80",
+    "description": "KyberSwap Attacker Address",
+    "pattern": "[x-defi-address:value = '0x57A72cE4fd69eBEdEfC1a938b690fbf11A7Dff80' AND (x-defi-address:blockchain = 'ethereum' OR x-defi-address:blockchain = 'polygon')]",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-03-01T00:00:00Z"
+}

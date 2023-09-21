@@ -1,0 +1,16 @@
+{
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "id": "attack-pattern--7bd74af4-7c5f-4741-bfc6-dd99d0c51e23",
+    "created": "2023-05-02T02:20:53.000Z",
+    "modified": "2023-05-02T02:20:53.000Z",
+    "name": "Reward manipulation exploit",
+    "extensions": {
+        "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_taxonomy_incident_cause": "Coding Mistake",
+    "x_defi_taxonomy_incident_type": "Absence of coding logic or sanity check",
+    "x_defi_taxonomy_layer": "SC"
+}

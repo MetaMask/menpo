@@ -1,0 +1,16 @@
+{
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "id": "attack-pattern--46c8aa2f-6e72-40ff-8425-3c0ed4078694",
+    "created": "2023-05-01T01:09:29.000Z",
+    "modified": "2023-05-01T01:09:29.000Z",
+    "name": "Private key theft incident",
+    "extensions": {
+        "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_taxonomy_layer": "AUX",
+    "x_defi_taxonomy_incident_type": "Compromised private key / wallet",
+    "x_defi_taxonomy_incident_cause": "Faulty Operation"
+}

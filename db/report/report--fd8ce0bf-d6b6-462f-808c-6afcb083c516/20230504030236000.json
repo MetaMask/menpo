@@ -1,0 +1,38 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--fd8ce0bf-d6b6-462f-808c-6afcb083c516",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "Pando Rings 22.11.06",
+    "description": "The attacker exploited a vulnerability in Pando Rings        price oracle and manipulated the price of sBTC-WBTC        (liquidity provider token of the trading pair BTC-WBTC on 4swap)        to attempt a theft of approximately $70 million worth of crypto assets.        $21,877,098.03 worth of crypto assets including ETH, EOS and BTC        were transferred out from the attacker's two perpetrating Mixin wallets        before measures could be taken.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-11-06T00:00:00Z",
+    "object_refs": [
+        "threat-actor--aba10cee-12fa-4ccf-b005-afa31e7bd40b",
+        "identity--7a7b48ac-8b10-4db2-895a-f698103f7068"
+    ],
+    "external_references": [
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/pando_im/status/1589045252413100032"
+        },
+        {
+            "source_name": "Web3 is Going Great",
+            "url": "https://web3isgoinggreat.com/?id=pando-exploited-for-20-million"
+        },
+        {
+            "source_name": "Pando Rings",
+            "url": "https://pando.im/news/2022/2022-11-06-alert-to-pando-community-hack-of-pando-rings/"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 20000000
+}

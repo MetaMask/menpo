@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--7a7b48ac-8b10-4db2-895a-f698103f7068",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "Pando Rings",
+    "description": "Lending Pool",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "Pando Rings",
+            "url": "https://pando.im/rings/"
+        }
+    ]
+}

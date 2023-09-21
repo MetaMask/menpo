@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--839b6d6b-cb79-4231-94c4-1444712cbbcb",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "CDN audit logs lack evidence of key creation for the attack.",
+    "object_refs": [
+        "report--9efcde0b-12c4-4f46-9200-01de7bcb1c94"
+    ]
+}

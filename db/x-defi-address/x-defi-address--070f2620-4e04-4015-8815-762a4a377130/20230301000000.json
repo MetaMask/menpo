@@ -1,0 +1,11 @@
+{
+    "type": "x-defi-address",
+    "spec_version": "2.1",
+    "id": "x-defi-address--070f2620-4e04-4015-8815-762a4a377130",
+    "name": "0x2dc0ba6ba3485edd61f17ffabf4c7a9626001d50 - Polygon",
+    "description": "KyberSwap Bounty Address for the Attacker",
+    "created": "2023-03-01T00:00:00Z",
+    "modified": "2023-03-01T00:00:00Z",
+    "blockchain": "polygon",
+    "value": "0x2dc0ba6ba3485edd61f17ffabf4c7a9626001d50"
+}

@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--863904bf-87f6-4b30-9675-7dab1228b587",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "MyAlgo Attacker",
+    "description": "('On February 20, 2023 and ongoing 2000+ Algorand network users and projects like ', 'Algodex, Lofty, AlgoCasino, etc. lost $9.2M+ due to private key compromises.')"
+}

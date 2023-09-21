@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--f44c5fdc-b106-4282-8abf-3a7e6a7129e4",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Platypus",
+    "description": "Avalanche-based Automated market maker (AMM)",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "Platypus",
+            "url": "https://platypus.finance/"
+        }
+    ]
+}

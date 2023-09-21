@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--ca02690e-86c7-4d61-b847-e5afc206de2b",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "0xd3f04cE2d37b182432e2f804F9913a02071CEa54",
+    "description": "Pando Ring Attacker address",
+    "pattern": "[x-defi-address:value = '0xd3f04cE2d37b182432e2f804F9913a02071CEa54' AND x-defi-address:blockchain = 'ethereum']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-05-04T03:02:36Z"
+}

@@ -1,0 +1,42 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--97051b41-83a9-4682-a1d5-092af2599f13",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Mango Markets 22.10.11",
+    "description": "On October 11, 2022 Mango Markets was exploited with a        price oracle manipulation attack with losses over $116M.        Interestingly, the attacker was soon discovered and engaged        in public discourse on Twitter.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-10-11T00:00:00Z",
+    "object_refs": [
+        "threat-actor--02c61061-588c-4667-af5c-f1bc66c9db7f",
+        "identity--51536d26-3609-4054-9125-2695733ab068"
+    ],
+    "external_references": [
+        {
+            "source_name": "Rekt News",
+            "url": "https://rekt.news/mango-markets-rekt/"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/avi_eisen/status/1581326197241180160"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/joshua_j_lim/status/1579987648546246658"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/mangomarkets/status/1580074498174652416"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 116000000
+}

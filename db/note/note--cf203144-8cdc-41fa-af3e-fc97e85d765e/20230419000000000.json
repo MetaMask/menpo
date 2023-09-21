@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--cf203144-8cdc-41fa-af3e-fc97e85d765e",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "Unclear how API key obtained.",
+    "object_refs": [
+        "report--9efcde0b-12c4-4f46-9200-01de7bcb1c94"
+    ]
+}

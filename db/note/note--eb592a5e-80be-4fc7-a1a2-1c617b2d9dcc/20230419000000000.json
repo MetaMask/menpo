@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--eb592a5e-80be-4fc7-a1a2-1c617b2d9dcc",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "Summary: Bug in Binance Bridge proof verification allowed attackers to forge arbitrary messages.",
+    "object_refs": [
+        "report--8ee1a8e4-f403-48f3-9799-09b12634eef0"
+    ]
+}

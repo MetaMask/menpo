@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--05e0d92e-635e-483a-82e4-e66edcd64f1a",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "0x1863b74778cf5e1c9c482a1cdc2351362bd08611",
+    "description": "Midas Capital Attacker",
+    "pattern": "[x-defi-address:value = '0x1863b74778cf5e1c9c482a1cdc2351362bd08611' AND x-defi-address:blockchain = 'polygon']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-04-19T00:00:00Z"
+}

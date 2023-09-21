@@ -1,0 +1,34 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--2891fb10-b4f1-4aef-b1cd-808fbb14eb5d",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "LendHub 23.01.12",
+    "description": "('On January 12, 2023 LendHub lost $6M due to a misconfiguration', 'which left a deprecated token contract live, which allowed attackers to arbitrage them.')",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2023-01-12T00:00:00Z",
+    "object_refs": [
+        "threat-actor--df7f320c-0885-48c4-8c8f-bfe2e024f9a3",
+        "identity--1c8829a3-741d-43dd-bc82-63d08e1fd7c6"
+    ],
+    "external_references": [
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/SlowMist_Team/status/1613906590574198784"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/LendHubDefi/status/1613846541651030018"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 6000000
+}

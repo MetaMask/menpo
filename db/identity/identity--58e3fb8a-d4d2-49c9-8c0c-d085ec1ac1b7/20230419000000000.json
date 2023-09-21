@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--58e3fb8a-d4d2-49c9-8c0c-d085ec1ac1b7",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "FTX",
+    "description": "FTX is a cryptocurrency exchange founded in 2017 by Sam Bankman-Fried and Gary Wang.",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/FTX_Official"
+        }
+    ]
+}

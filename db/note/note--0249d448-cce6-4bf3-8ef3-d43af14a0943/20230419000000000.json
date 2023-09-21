@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--0249d448-cce6-4bf3-8ef3-d43af14a0943",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "In a statement, the team explained that they were collaborating with Ankr Protocol to resolve the issue and that they had proposed a bilateral arrangement in which Ankr would pay for Helio's bad debt as a result of this exploit.",
+    "object_refs": [
+        "report--b4267f75-acb6-48f1-894a-8ee6b31590e5"
+    ]
+}

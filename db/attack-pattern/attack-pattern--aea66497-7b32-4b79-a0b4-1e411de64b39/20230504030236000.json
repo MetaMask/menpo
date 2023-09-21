@@ -1,0 +1,16 @@
+{
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "id": "attack-pattern--aea66497-7b32-4b79-a0b4-1e411de64b39",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "Price oracle manipulation",
+    "extensions": {
+        "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_taxonomy_incident_type": "On-chain oracle manipulation",
+    "x_defi_taxonomy_incident_cause": "Unsafe Dependency",
+    "x_defi_taxonomy_layer": "PRO"
+}

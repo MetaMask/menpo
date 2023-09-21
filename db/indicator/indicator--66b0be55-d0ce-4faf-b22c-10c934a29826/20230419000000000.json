@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--66b0be55-d0ce-4faf-b22c-10c934a29826",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "yUJw9a2PyoqKkH47i4yEGf4WXomSHMiK7Lp29Xs2NqM",
+    "description": "Mango Markets Attacker Address",
+    "pattern": "[x-defi-address:value = 'yUJw9a2PyoqKkH47i4yEGf4WXomSHMiK7Lp29Xs2NqM' AND x-defi-address:blockchain = 'solana']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-04-19T00:00:00Z"
+}

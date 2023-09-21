@@ -1,0 +1,58 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--b4267f75-acb6-48f1-894a-8ee6b31590e5",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Helio 22.12.02",
+    "description": "('On December 2, 2022 Helio lost $19M as a result of a delayed price oracle,', 'which allowed traders to borrow stablecoin with worthless aBNBc token.', 'The root cause of the vulnerability is due to the failure of oracle', 'in updating the price of the associated tokens after they had crashed to ', 'a significantly lower value than they earlier trading price.')",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-12-02T00:00:00Z",
+    "object_refs": [
+        "threat-actor--352f506f-99af-476a-b776-a9aef85f4daf",
+        "identity--7f8370e1-8b6a-4902-8723-7ffc24bb9c9e"
+    ],
+    "external_references": [
+        {
+            "source_name": "NeptuneMutual",
+            "url": "https://neptunemutual.com/blog/report-know-about-the-helio-protocol-hack"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/WuBlockchain/status/1598523763028799488"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/cz_binance/status/1598575867311132673"
+        },
+        {
+            "source_name": "Rekt News",
+            "url": "https://rekt.news/ankr-helio-rekt/"
+        },
+        {
+            "source_name": "The Block",
+            "url": "https://www.theblock.co/post/191668/attacker-pockets-20-million-in-exploits-on-ankr-and-helio"
+        },
+        {
+            "source_name": "Dune",
+            "url": "https://dune.com/philosophia_ventures/helio-money-exploitation"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/WuBlockchain/status/1598523763028799488"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/Helio_Money/status/1598710454796390407?s=20&t=9Jh4Ukme6kpP39Wx68gUEg"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 19000000
+}

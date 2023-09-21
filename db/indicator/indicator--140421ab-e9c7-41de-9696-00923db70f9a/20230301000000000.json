@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--140421ab-e9c7-41de-9696-00923db70f9a",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "0xb9943d5ab8b3a70925714233d938dd62e957f92e",
+    "description": "KyberSwap Attacker Address Receiving Tokens",
+    "pattern": "[x-defi-address:value = '0xb9943d5ab8b3a70925714233d938dd62e957f92e' AND x-defi-address:blockchain = 'ethereum']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-03-01T00:00:00Z"
+}

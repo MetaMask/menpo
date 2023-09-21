@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--a192f90d-0418-4fbe-8736-b2cda71241e2",
+    "created": "2023-05-01T01:09:29.000Z",
+    "modified": "2023-05-01T01:09:29.000Z",
+    "name": "bc1qw5g8lw4kzltpdcraehy2dt6dqda8080xd6vhl4kg4wwsypwerg9s3x6pvk",
+    "description": "Deribit Attacker Bitcoin Address",
+    "pattern": "[x-defi-address:value = 'bc1qw5g8lw4kzltpdcraehy2dt6dqda8080xd6vhl4kg4wwsypwerg9s3x6pvk' AND x-defi-address:blockchain = 'bitcoin']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-05-01T01:09:29Z"
+}

@@ -24,28 +24,61 @@ source menpo_env/bin/activate
 pip3 install -r requirements.txt # If first time
 ```
 
-### Creating a bundle
+### Generate and store STIX objects from a script
 
 ```bash
-cd python-scripts
+cd python-scripts/data-input
 python3 <stix2 python script>
 ```
 
 Example
 
 ```bash
-cd python-scripts
+cd python-scripts/data-input
 source menpo_env/bin/activate
 
 python3 22.09.01.kyberswap.py
 ```
 
-## Visualization of incidents
+## Accessing the database
 
-Suppose you created and wrapped the STIX objects of your incident into the file `json-stix-db/22.09.01.kyberswap.json`.
+### Getting a list of all the reports in the DB
 
-To visualize the incident, just use [Oasis' CTI STIX Visualizer](https://oasis-open.github.io/cti-stix-visualization/) this way:
+```python
+import json
 
-https://oasis-open.github.io/cti-stix-visualization/?url=https://raw.githubusercontent.com/metamask/menpo/main/json-stix-db/22.09.01.kyberswap.json
+from stix2 import FileSystemSource, Filter
+from stix2.base import STIXJSONEncoder
 
-<img width="888" alt="Visualization 00" src="https://user-images.githubusercontent.com/85324266/232174604-41c2ba3b-57dd-4c10-975d-5845b7dbf5ef.png">
+fs = FileSystemSource("../../db")
+
+# Do the query
+filt = Filter('type', '=', 'report')
+reports = fs.query([filt])
+
+# Convert the Python objects to JSON and print them
+json_str = json.dumps(reports, indent=4, cls=STIXJSONEncoder)
+print(json_str)
+
+# Or, if you don't like json, we can give you a more compact one
+sorted_reports = sorted(reports, key=lambda x: x["published"])
+
+print("Reports in the DB:", len(sorted_reports), "\n")
+
+for report in sorted_reports:
+  print("-", report.name)
+```
+
+### Getting a <some relational query I have to figure out>
+
+```python
+# TODO
+```
+
+### Generate a json report and render it on the STIX visualizer
+
+```python
+# TODO
+
+# Maybe create a tmp file, and give that as a ref to the browser?
+```

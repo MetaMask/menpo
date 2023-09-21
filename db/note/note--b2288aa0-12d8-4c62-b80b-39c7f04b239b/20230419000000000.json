@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--b2288aa0-12d8-4c62-b80b-39c7f04b239b",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "Additionally, in order to aid with the re-peg of $HAY, Ankr would be purchasing any extra $HAY that is produced as a result of the discounted $aBNBc and send it to a burn address.",
+    "object_refs": [
+        "report--b4267f75-acb6-48f1-894a-8ee6b31590e5"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--0b51dd76-c0b0-4f24-b9d1-df0eceb1487f",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "No evidence of CDN user account compromise.",
+    "object_refs": [
+        "report--9efcde0b-12c4-4f46-9200-01de7bcb1c94"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--6fefb227-7ea5-4bdb-b6a6-266e347f1ee6",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "relationship_type": "indicates",
+    "source_ref": "indicator--9a88a805-3460-4b76-9c59-f290410ba125",
+    "target_ref": "threat-actor--aba10cee-12fa-4ccf-b005-afa31e7bd40b"
+}

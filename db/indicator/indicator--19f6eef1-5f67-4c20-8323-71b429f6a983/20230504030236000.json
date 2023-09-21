@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--19f6eef1-5f67-4c20-8323-71b429f6a983",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "entofkdupows",
+    "description": "Pando Ring Attacker address",
+    "pattern": "[x-defi-address:value = 'entofkdupows' AND x-defi-address:blockchain = 'eos']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-05-04T03:02:36Z"
+}

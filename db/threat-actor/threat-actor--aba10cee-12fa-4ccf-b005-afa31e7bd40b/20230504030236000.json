@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--aba10cee-12fa-4ccf-b005-afa31e7bd40b",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "name": "Pando Rings Attacker",
+    "description": "The attacker exploited a vulnerability in Pando Rings price oracle and manipulated the price of sBTC-WBTC"
+}

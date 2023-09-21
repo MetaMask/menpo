@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--5aebdf3d-81b3-4bf6-90b8-84de0e2baf4f",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "content": "Though the vulnerability was in the project’s code, this attack targeted        the users directly via a vulnerability in the use of the transferFrom()        function. Any tokens approved for trading on Transit Swap could be        transferred directly from users’ wallets to the unknown exploiter’s address.",
+    "object_refs": [
+        "report--dd261c10-3600-4d4d-83d4-37d0beed7681"
+    ]
+}

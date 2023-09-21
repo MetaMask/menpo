@@ -1,0 +1,45 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--e69055f2-fb14-44f8-8da5-1adb881cedea",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Platypus 23.02.16",
+    "description": "('On February 16, 2023 Platypus lost $9m due to a logic error when handling withdrawals with borrowed assets.', 'The exploit took advantage of a faulty check mechanism when withdrawing collateral.')",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2023-02-16T00:00:00Z",
+    "object_refs": [
+        "threat-actor--c0fac883-49df-4d85-abaf-17d0210cb5eb",
+        "identity--f44c5fdc-b106-4282-8abf-3a7e6a7129e4"
+    ],
+    "external_references": [
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/CertiKAlert/status/1626318821840629763"
+        },
+        {
+            "source_name": "Twitter",
+            "description": "Comments on the reverse hack",
+            "url": "https://twitter.com/danielvf/status/1626641254531448833"
+        },
+        {
+            "source_name": "Twitter",
+            "description": "ZachBT doxxed the attacker ",
+            "url": "https://twitter.com/zachxbt/status/1626434265260118021"
+        },
+        {
+            "source_name": "Medium",
+            "description": "Platypus Incident postmortem",
+            "url": "https://medium.com/@omniscia.io/platypus-finance-incident-post-mortem-7b71a0a47a5e"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 9000000
+}

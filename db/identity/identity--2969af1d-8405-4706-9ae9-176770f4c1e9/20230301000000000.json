@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--2969af1d-8405-4706-9ae9-176770f4c1e9",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "KyberSwap",
+    "description": "KyberSwap is a decentralized exchange (DEX) platform that allows users to swap tokens without an intermediary. It is built on the Ethereum blockchain and supports a wide variety of ERC-20 tokens. KyberSwap is a part of the larger Kyber Network, which is a protocol for decentralized cross-chain token swaps that supports multiple blockchains.",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "KyberSwap",
+            "url": "https://kyberswap.com/"
+        }
+    ]
+}

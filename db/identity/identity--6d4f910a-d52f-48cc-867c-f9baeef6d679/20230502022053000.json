@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--6d4f910a-d52f-48cc-867c-f9baeef6d679",
+    "created": "2023-05-02T02:20:53.000Z",
+    "modified": "2023-05-02T02:20:53.000Z",
+    "name": "BabySwap",
+    "description": "MetaFi platform on the BNB Chain",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "BabySwap",
+            "url": "https://home.babyswap.finance/"
+        }
+    ]
+}

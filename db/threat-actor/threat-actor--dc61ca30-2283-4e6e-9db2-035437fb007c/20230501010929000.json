@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--dc61ca30-2283-4e6e-9db2-035437fb007c",
+    "created": "2023-05-01T01:09:29.000Z",
+    "modified": "2023-05-01T01:09:29.000Z",
+    "name": "Deribit Attacker",
+    "description": "Deribit Exchange has lost $28M from their hot wallets on the Ethereum and Bitcoin networks."
+}

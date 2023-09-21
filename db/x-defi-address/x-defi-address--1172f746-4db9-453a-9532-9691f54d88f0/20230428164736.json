@@ -1,0 +1,11 @@
+{
+    "type": "x-defi-address",
+    "spec_version": "2.1",
+    "id": "x-defi-address--1172f746-4db9-453a-9532-9691f54d88f0",
+    "name": "0xed1afc8c4604958c2f38a3408fa63b32e737c428",
+    "description": "Vulnerable contract in ethereum and BSC",
+    "created": "2023-04-28T16:47:36Z",
+    "modified": "2023-04-28T16:47:36Z",
+    "blockchain": "ethereum, bsc",
+    "value": "0xed1afc8c4604958c2f38a3408fa63b32e737c428"
+}

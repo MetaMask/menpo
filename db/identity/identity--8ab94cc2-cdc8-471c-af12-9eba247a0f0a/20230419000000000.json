@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--8ab94cc2-cdc8-471c-af12-9eba247a0f0a",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Bo Shen",
+    "description": "Bo Shen. Fenbushi Capital @fenbushi",
+    "identity_class": "individual",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/boshen1011/"
+        }
+    ]
+}

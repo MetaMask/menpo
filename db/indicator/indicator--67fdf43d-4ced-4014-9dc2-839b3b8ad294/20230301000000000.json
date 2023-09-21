@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--67fdf43d-4ced-4014-9dc2-839b3b8ad294",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "7e5708652dbea1bb985ede7f810adcf33eff138f47f63c6525a0801a4235b3c5",
+    "description": "KyberSwap Attacker sent the fund out, to a mixer/CEX",
+    "pattern": "[x-defi-transaction:value = '7e5708652dbea1bb985ede7f810adcf33eff138f47f63c6525a0801a4235b3c5' AND x-defi-address:blockchain = 'bitcoin']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-03-01T00:00:00Z"
+}

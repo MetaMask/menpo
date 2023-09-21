@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--56b71f6f-19d2-4bb9-ac7c-bd9de5e770a8",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "2022-10-06T20:43:00Z - Attacker succeeded in delivering the last 1m BNB package to its own address.",
+    "object_refs": [
+        "report--8ee1a8e4-f403-48f3-9799-09b12634eef0"
+    ]
+}

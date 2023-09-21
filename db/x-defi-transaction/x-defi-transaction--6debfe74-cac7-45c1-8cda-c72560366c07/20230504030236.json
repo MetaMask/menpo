@@ -1,0 +1,11 @@
+{
+    "type": "x-defi-transaction",
+    "spec_version": "2.1",
+    "id": "x-defi-transaction--6debfe74-cac7-45c1-8cda-c72560366c07",
+    "name": "0xfc453378ee7386c43f70836ded62db92b5364a4c4d2c0fe02c3aaa57c95b2241",
+    "description": "ETH Message to the Pando Rings attacker",
+    "created": "2023-05-04T03:02:36Z",
+    "modified": "2023-05-04T03:02:36Z",
+    "blockchain": "ethereum",
+    "value": "0xfc453378ee7386c43f70836ded62db92b5364a4c4d2c0fe02c3aaa57c95b2241"
+}

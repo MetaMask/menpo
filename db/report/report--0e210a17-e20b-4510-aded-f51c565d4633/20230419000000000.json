@@ -1,0 +1,50 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--0e210a17-e20b-4510-aded-f51c565d4633",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "FTX 22.11.12",
+    "description": "('On Nov 12 FTX and FTX US experienced suspicious withdrawals upwards of $450m.', 'The tokens were sold for DAI, ETH, BNB, & more.', 'The tokens were consolidated into one main wallet 0x59.', 'FTX US GC Ryne Miller clarified these were unauthorized transactions.', 'Tether and Paxos froze assets on Ethereum, Solana, and Avalanche.')",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-11-12T00:00:00Z",
+    "object_refs": [
+        "threat-actor--8ef2f092-38e0-4642-8186-1f6ceceba34b",
+        "identity--58e3fb8a-d4d2-49c9-8c0c-d085ec1ac1b7"
+    ],
+    "external_references": [
+        {
+            "source_name": "Rekt News",
+            "url": "https://rekt.news/sbf-mask-off/"
+        },
+        {
+            "source_name": "CoinDesk",
+            "url": "https://www.coindesk.com/business/2022/11/10/tether-freezes-46m-of-usdt-following-law-enforcement-request/"
+        },
+        {
+            "source_name": "Decrypt",
+            "url": "https://decrypt.co/114587/paxos-freezes-paxg-crypto-ftx"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/_Ryne_Miller/status/1591495427211526146"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/zachxbt/status/1591475246250733568"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/zachxbt/status/1591276687228035074"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 450000000
+}

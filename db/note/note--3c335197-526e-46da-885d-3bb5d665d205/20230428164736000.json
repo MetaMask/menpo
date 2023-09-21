@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--3c335197-526e-46da-885d-3bb5d665d205",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "content": "Root cause of this attack: a controllable `transferFrom()` external call",
+    "object_refs": [
+        "report--dd261c10-3600-4d4d-83d4-37d0beed7681"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f74513a1-95fa-4ed1-a403-6b4cb947059a",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "0x391a665e8efad14cd63d5caed10f53881ebb8eab1c5ae14648db2d06cdd00cdd",
+    "description": "Helio attacker used the $aBNBc tokens they had already deposited as collateral to borrow 16,444,740 $HAY tokens.",
+    "pattern": "[x-defi-transaction:value = '0x391a665e8efad14cd63d5caed10f53881ebb8eab1c5ae14648db2d06cdd00cdd' AND x-defi-address:blockchain = 'bsc']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-03-01T00:00:00Z"
+}

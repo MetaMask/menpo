@@ -1,0 +1,34 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--03b4731d-2abf-471d-a58d-4f200c7d12c6",
+    "created": "2023-05-01T01:09:29.000Z",
+    "modified": "2023-05-01T01:09:29.000Z",
+    "name": "Deribit 22.11.01",
+    "description": "Deribit Exchange has lost $28M from their hot wallets on the Ethereum and Bitcoin networks.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-11-01T00:00:00Z",
+    "object_refs": [
+        "threat-actor--dc61ca30-2283-4e6e-9db2-035437fb007c",
+        "identity--78f4acda-c0d5-428a-b506-e1d44e355ec4"
+    ],
+    "external_references": [
+        {
+            "source_name": "Rekt News",
+            "url": "https://rekt.news/deribit-rekt/"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/DeribitExchange/status/1587701883778523136"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 28000000
+}

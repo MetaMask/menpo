@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--57e80aec-d1f2-4f48-802d-9cf17c1d098f",
+    "created": "2023-05-04T03:02:36.000Z",
+    "modified": "2023-05-04T03:02:36.000Z",
+    "content": "A message to the hacker if you are reading this:\n    We have sent two messages from the address 0x3e99920e6c40971655e19ad0598454992210499f.\n    There are consequences for your perpetrating the theft.\n    Even not now, it will be only a matter of time.\n    The communication channel is still open.\n    Please be in touch and we can negotiate what\n    can be done in exchange for the returning of the funds",
+    "object_refs": [
+        "report--fd8ce0bf-d6b6-462f-808c-6afcb083c516"
+    ]
+}

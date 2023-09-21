@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--78f4acda-c0d5-428a-b506-e1d44e355ec4",
+    "created": "2023-05-01T01:09:29.000Z",
+    "modified": "2023-05-01T01:09:29.000Z",
+    "name": "Deribit",
+    "description": "Cryptocurrency derivatives platform for traders of all backgrounds and trading styles",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "Deribit",
+            "url": "https://www.deribit.com/"
+        }
+    ]
+}

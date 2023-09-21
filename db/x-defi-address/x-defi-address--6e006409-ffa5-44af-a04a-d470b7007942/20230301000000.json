@@ -1,0 +1,11 @@
+{
+    "type": "x-defi-address",
+    "spec_version": "2.1",
+    "id": "x-defi-address--6e006409-ffa5-44af-a04a-d470b7007942",
+    "name": "0x6e2ff642d60d1c99811f0a1a39e1b0250c488cce - Polygon",
+    "description": "KyberSwap Attack Victim 0",
+    "created": "2023-03-01T00:00:00Z",
+    "modified": "2023-03-01T00:00:00Z",
+    "blockchain": "polygon",
+    "value": "0x6e2ff642d60d1c99811f0a1a39e1b0250c488cce"
+}

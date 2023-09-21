@@ -1,0 +1,17 @@
+{
+    "type": "attack-pattern",
+    "spec_version": "2.1",
+    "id": "attack-pattern--82a864ae-57fe-4710-b6b3-473a5b7d03ae",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "name": "Oracle Price Manipulation",
+    "description": "Delayed price oracle which allowed traders to borrow stablecoin with worthless aBNBc token.",
+    "extensions": {
+        "extension-definition--59cde1e5-2ce1-4732-a09d-596f401ba65b": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_taxonomy_layer": "PRO",
+    "x_defi_taxonomy_incident_type": "On-chain oracle manipulation",
+    "x_defi_taxonomy_incident_cause": "Unsafe Dependency"
+}

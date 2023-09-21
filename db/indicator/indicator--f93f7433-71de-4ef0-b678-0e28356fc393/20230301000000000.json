@@ -1,0 +1,13 @@
+{
+    "type": "indicator",
+    "spec_version": "2.1",
+    "id": "indicator--f93f7433-71de-4ef0-b678-0e28356fc393",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "bc1q8gn5fuu2eva2cwmm5v5rqvqs39va44n3u7l6dp",
+    "description": "KyberSwap Attacker moved funds to BTC",
+    "pattern": "[x-defi-address:value = 'bc1q8gn5fuu2eva2cwmm5v5rqvqs39va44n3u7l6dp' AND x-defi-address:blockchain = 'bitcoin']",
+    "pattern_type": "stix",
+    "pattern_version": "2.1",
+    "valid_from": "2023-03-01T00:00:00Z"
+}

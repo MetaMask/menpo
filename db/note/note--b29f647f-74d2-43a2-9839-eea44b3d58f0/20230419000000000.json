@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--b29f647f-74d2-43a2-9839-eea44b3d58f0",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "This created a discrepancy between the old and new lBSV, with different Comptroller contracts but same pricing in the market, causing a disconnect in the calculation of liabilities between the old and new markets.",
+    "object_refs": [
+        "report--2891fb10-b4f1-4aef-b1cd-808fbb14eb5d"
+    ]
+}

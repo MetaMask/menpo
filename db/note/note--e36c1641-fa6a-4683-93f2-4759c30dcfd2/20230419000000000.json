@@ -1,0 +1,11 @@
+{
+    "type": "note",
+    "spec_version": "2.1",
+    "id": "note--e36c1641-fa6a-4683-93f2-4759c30dcfd2",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "content": "BXH was not audited by CertiK. The “emergency function” InCaseTokensGetStuck()    would have been flagged as a severe centralization risk in an audit.    Functions such as this are a risk on multiple levels.    They give privileged accounts the ability to drain affected contracts of all funds,    which opens the door to malicious insiders taking advantage of this power,    while also providing a prime target for phishers.",
+    "object_refs": [
+        "report--66c8bb88-8df9-4256-bf84-8df0014d6b27"
+    ]
+}

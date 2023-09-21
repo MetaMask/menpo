@@ -1,0 +1,19 @@
+{
+    "type": "identity",
+    "spec_version": "2.1",
+    "id": "identity--852a8aa4-eae6-4dc2-bacf-1586a95725ba",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "name": "Transit Finance",
+    "description": "Multi-chain DEX Aggregator",
+    "identity_class": "organization",
+    "sectors": [
+        "financial-services"
+    ],
+    "external_references": [
+        {
+            "source_name": "Transit Finance",
+            "url": "https://www.transit.finance/en/"
+        }
+    ]
+}

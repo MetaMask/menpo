@@ -1,0 +1,9 @@
+{
+    "type": "threat-actor",
+    "spec_version": "2.1",
+    "id": "threat-actor--2e936601-b6e7-4ec8-a1be-08e9ce119848",
+    "created": "2023-04-28T16:47:36.000Z",
+    "modified": "2023-04-28T16:47:36.000Z",
+    "name": "Transit Finance Attacker",
+    "description": "On October 1, 2022 Transit Finance users were targeted        using a function parameter injection bug in the DEX’s contract."
+}

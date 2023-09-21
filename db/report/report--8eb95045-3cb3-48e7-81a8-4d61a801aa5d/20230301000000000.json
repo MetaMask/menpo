@@ -1,0 +1,42 @@
+{
+    "type": "report",
+    "spec_version": "2.1",
+    "id": "report--8eb95045-3cb3-48e7-81a8-4d61a801aa5d",
+    "created": "2023-03-01T00:00:00.000Z",
+    "modified": "2023-03-01T00:00:00.000Z",
+    "name": "KyberSwap 22.09.01",
+    "description": "On September 1, 2022 KyberSwap users lost $265K in a front-end compromise.There is no smart contract vulnerability.Malicious code in KyberSwap Google Tag Manager (GTM), which inserted a false approval.",
+    "report_types": [
+        "threat-actor",
+        "attack-pattern"
+    ],
+    "published": "2022-09-01T00:00:00Z",
+    "object_refs": [
+        "threat-actor--f704ca69-c62e-44ac-96ba-374ec231137e",
+        "identity--2969af1d-8405-4706-9ae9-176770f4c1e9"
+    ],
+    "external_references": [
+        {
+            "source_name": "KyberSwap Blog",
+            "url": "https://blog.kyber.network/interim-update-hack-is-removed-kyberswap-is-secure-next-steps-8b2d594efb33"
+        },
+        {
+            "source_name": "KyberSwap Blog",
+            "url": "https://blog.kyber.network/notice-of-exploit-of-kyberswap-frontend-963aa8febd6a"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/cz_binance/status/1565976776710430721"
+        },
+        {
+            "source_name": "Twitter",
+            "url": "https://twitter.com/KyberNetwork/status/1565421305410686976"
+        }
+    ],
+    "extensions": {
+        "extension-definition--393acb6c-fe64-42b5-92d5-a8ec243c4876": {
+            "extension_type": "toplevel-property-extension"
+        }
+    },
+    "x_defi_estimated_loss_usd": 265000
+}

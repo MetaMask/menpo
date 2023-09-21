@@ -1,0 +1,10 @@
+{
+    "type": "relationship",
+    "spec_version": "2.1",
+    "id": "relationship--f23671c9-e1d1-423f-b501-f1d9664af637",
+    "created": "2023-04-19T00:00:00.000Z",
+    "modified": "2023-04-19T00:00:00.000Z",
+    "relationship_type": "uses",
+    "source_ref": "identity--f8e56fb8-c2dd-4b2f-a3dc-84fc0bc8ea27",
+    "target_ref": "x-defi-address--2edbf936-f854-416b-82fb-26bca6f04221"
+}
