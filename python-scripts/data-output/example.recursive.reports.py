@@ -40,9 +40,10 @@ def start_command_line_arg_found():
   uuid_str = sys.argv[1]
 
   # You can see here my blatant disregard for input parameter validation...
-  report = fs.get("report--" + uuid_str)
+  report_id = "report--" + uuid_str
+  report = fs.get(report_id)
 
-  report_stix_ids = []
+  report_stix_ids = [report_id]
 
   # In reports, `fs.relationships(report) will return []
   # Understandable, as the engine is looking for SROs
