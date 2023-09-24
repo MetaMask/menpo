@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+#top-header-bar
+{
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#top-header-bar h1
+{
+  font-size: 36px;
+  font-weight: normal;
+  display: inline;
+}
+
+#top-header-bar a
+{
+    float: right;
+}
+
+#canvas {
+  border: solid 1px black;
+  width: 100%;
+  height: 600px;
+  overflow: auto;
+}
+
+#uploader {
+  text-align: center;
+  line-height: 1;
+  font-size: 36px;
+}
+
+#uploader a {
+  font-size: 20px;
+}
+
+#chosen-files {
+  margin-left: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+#canvas-wrapper {
+  margin: 0 10px 0 10px;
+  float: left;
+  width: 60%;
+}
+
+.sidebar {
+  width: 34%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 10px;
+  padding: 25px;
+  background-color: #fafafa;
+  overflow: auto;
+}
+
+.sidebar h2 {
+  font-weight: normal;
+  text-align: center;
+}
+
+#legend-content {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#legend-content img {
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+#legend-content td {
+    width: 50%;
+}
+
+#legend-content .typeHidden {
+    font-style: italic;
+    color: gray;
+}
+
+.selected-object-object-content {
+    margin-left: 2em;  /* affects indentation of object properties */
+}
+
+.selected-object-prop-name {
+    color: purple;
+    margin-right: 0.5em;  /* space out prop name from its value. */
+}
+
+.selected-object-list {
+    padding-left: 2em; /* affects indentation of list items */
+    margin: 0; /* snug lists up with what's above/below them */
+    list-style: none;  /* drop the list item numbering */
+}
+
+.selected-object-text-value {
+    color: darkblue;
+}
+
+.selected-object-text-value-ref {
+    color: lightblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* If a reference is to an object which is not in the graph */
+.selected-object-text-value-ref-dangling {
+    color: red;
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.selected-object-nontext-value {
+    color: orange;
+}
+
+.list-view-item {
+    cursor: pointer;
+}
+
+.list-view-selected {
+    background-color: lightgray;
+}
+
+#paste-area-stix-json {
+  height: 25em;
+  width: 40em;
+}
+
+#paste-area-custom-config {
+  height: 35em;
+  width: 40em;
+}
+
+.linkish:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>STIX Viewer</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="application.css" />
+    <script src="require.js" data-main="application"></script>
+  </head>
+
+  <body>
+    <div id="top-header-bar">
+      <h1>
+        <span id="header">STIX Visualizer (Menpo light fork)</span><span id="chosen-files"></span>
+      </h1>
+    </div>
+
+    <div id="canvas-container">
+      <div id="canvas-wrapper">
+        <div id="canvas"></div>
+        <p>Dragging anywhere will pan the viewing area.</p>
+        <p>Use the mouse wheel to zoom.</p>
+        <p>Click the 'Selected Node' area to expand/shrink it.</p>
+        <p>Click legend items to toggle visibility of nodes of a particular STIX type.</p>
+      </div>
+      <div id="selected" class="sidebar">
+        <h2>Selected Node</h2>
+        <div id="selection"></div>
+      </div>
+      <div id="connections" class="sidebar">
+        <h2>Linked Nodes</h2>
+        <h3>Incoming Edges:</h3>
+        <div id="connections-incoming"></div>
+        <h3>Outgoing Edges:</h3>
+        <div id="connections-outgoing"></div>
+      </div>
+      <div id="legend" class="sidebar">
+        <table id="legend-content">
+          <caption><h2>Legend</h2></caption>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

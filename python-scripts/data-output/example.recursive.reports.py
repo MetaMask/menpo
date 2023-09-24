@@ -1,5 +1,6 @@
-import json, os, sys, tempfile
+import json, os, shutil, sys, tempfile, webbrowser
 
+from urllib.parse import urlunparse
 from stix2 import FileSystemSource, Filter
 from stix2.base import STIXJSONEncoder
 
@@ -50,19 +51,41 @@ def start_command_line_arg_found():
   for object_ref in report.object_refs:
     recurse_and_append_objects(report_stix_ids, object_ref)
 
-  # json and the argonauts time
-  json_file_name =os.path.join(
-      os.getcwd(),
-      "temp-json/",
-      os.path.basename(tempfile.NamedTemporaryFile().name) + ".json")
-  with open(json_file_name, 'w') as f:
-    f.write(json.dumps([fs.get(id) for id in report_stix_ids], indent=4, cls=STIXJSONEncoder))
-
-  # The visualizer application doesn't allow to user file:///
+  # The visualizer application doesn't allow to use file:///
   # https://github.com/oasis-open/cti-stix-visualization/blob/5ce57915ef1c3e5a7472adf765d93d24dec189f5/application.js#L771
-  # Throwing the idea of leveraging a temp file overboard,
+  #
+  # So, we use out own version of the visualizer...
+  #
+  # To make things extremely simple, this visualizer
+  # won't receive any GET parameter and only renders
+  # the contents of the file `latest.js`
 
-  print("JSON file created at", json_file_name)
+  # Prepare the `latest.js` file contents
+  # We are producing a requireJS module
+  json_content = json.dumps([fs.get(id) for id in report_stix_ids], indent=4, cls=STIXJSONEncoder)
+  javascript_code = f'''var data = `
+  {json_content}
+`
+define(function() {{
+  return {{
+    data
+  }};
+}});
+'''
+  filepath_latest_js = os.path.join(
+      os.getcwd(),
+      "viz",
+      "temp-json",
+      "latest.js")
+  with open(filepath_latest_js, 'w') as f:
+    f.write(javascript_code)
+
+  # Now we only need to tell `webbrowser` where is the viz app and call it
+  scheme = "file"
+  path = os.path.join(os.getcwd(), "viz", "index.html")
+  url = urlunparse((scheme, "", path, "", "", ""))
+
+  webbrowser.open(url)
 
 ################################################################################
 #
